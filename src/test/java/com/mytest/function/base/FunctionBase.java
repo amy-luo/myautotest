@@ -9,11 +9,7 @@ import org.reflections.scanners.MethodAnnotationsScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
@@ -30,7 +26,6 @@ public class FunctionBase {
         initLog();
     }
 
-    @BeforeClass
     public void initLog(){
         URL url = ResourceUtils.getResourceAsURL(this,new Resource("log4j.properties"));
         System.out.println(url.getPath());
@@ -66,7 +61,7 @@ public class FunctionBase {
 
     public List<String> loadTestCase(){
         Yaml yaml = new Yaml();
-        InputStream stream = ResourceUtils.getResourceAsStream(new FunctionBase(),new Resource(fileName));
+        InputStream stream = ResourceUtils.getResourceAsStream(this,new Resource(fileName));
         Set<String>  testDatas = new HashSet<String>();
         try {
             String o = yaml.loadAs(stream,String.class);

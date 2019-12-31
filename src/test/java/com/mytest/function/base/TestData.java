@@ -122,7 +122,7 @@ public class TestData implements Serializable {
 
     @Override
     public String toString() {
-        String model = "TestData[%s %s %s]";
-        return String.format(model,dataId,logicId,description);
+        String model = "TestData[%s %s]";
+        return String.format(model,dataId,description);
     }
 }
