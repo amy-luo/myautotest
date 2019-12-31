@@ -1,0 +1,10 @@
+- !!com.mytest.function.base.TestData
+  logicId: USER_LOGIN
+  dataId: USER_LOGIN
+  description: login user
+  dataCache: true
+  dataItems:
+    loginParam:
+      phoneNumber: '811245164'
+      password: '123123'
+      cookies: '$cookies'
