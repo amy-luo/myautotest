@@ -32,9 +32,7 @@ public class FunctionBase {
         PropertyConfigurator.configure(url.getPath());
     }
 
-    @DataProvider(
-            name = "myDataProvider"
-    )
+    @DataProvider(name = "myDataProvider")
     public Iterator<Object[]> batchDataProvider(Method method) {
         return new MyDataProvider(loadTestData(loadTestCase()));
     }
