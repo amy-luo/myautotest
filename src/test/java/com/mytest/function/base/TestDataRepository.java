@@ -14,6 +14,8 @@ public class TestDataRepository {
     List<TestData> allCase;
     Map<String,List<TestData>> subCase;
     private String basePath = "testcase";
+
+    //加载testcase目录下所有的用例数据，转换成TestData数据模型，List<TestData> allCase中；
     public void loadAll(){
         File file = new File(new Resource(basePath).getURL().getFile());
         File []dirList = file.listFiles();
@@ -27,6 +29,7 @@ public class TestDataRepository {
         subCase = allCase.stream().collect(Collectors.groupingBy(TestData::getLogicId));
     }
 
+    //将指定file里面的yaml文件解析成TestData数据模型，放入Set<TestData>中；
     public Set<TestData> loadDirTestData(File file,Set<TestData> testData){
         if(file.isDirectory()){
             File[] listFiles = file.listFiles();
@@ -57,12 +60,14 @@ public class TestDataRepository {
         return null;
     }
 
+    //将指定的yaml文件（例如listcase中的用例对应的yaml文件）的testcases的解析成TestData数据模型，放入List<TestData>中；
     public List<TestData> getCaseData(List<String> caseIds){
         loadAll();
         Set<TestData> dataSet = new HashSet<>();
         for (String caseId:caseIds){
             if(caseId.startsWith(basePath)){
                 try {
+                    //将对应file中yaml文件testcase解析成TestData，放入Set<TestData>中
                     File file = new File(new Resource(caseId.replace(".","/")).getURL().getFile());
                     dataSet.addAll(loadDirTestData(file,new HashSet<>()));
                 }catch (Exception e){
