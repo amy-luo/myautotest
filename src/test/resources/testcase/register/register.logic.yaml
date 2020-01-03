@@ -7,11 +7,11 @@
     - paramMap=ccprepare:SecurityGetPublickeyApi?paramMap=${paramMap}
     - paramMap=ccprepare:SkyRegisterRegisterApi?paramMap=${paramMap}&password=${password}
 
-- !!com.mytest.function.base.TestLogic
-  logicId: USER_REGISTER
-  description: SKY正常登陆
-  ccils: |
-    - paramMap=ccprepare:CheckRegisteredUserAndSendOTPTest?phoneNumber=${phoneNumber}
+#- !!com.mytest.function.base.TestLogic
+#  logicId: USER_REGISTER
+#  description: SKY正常登陆
+#  ccils: |
+#    - paramMap=ccprepare:CheckRegisteredUserAndSendOTPApi?phoneNumber=${phoneNumber}
 #    paramMap=ccprepare:SecurityGetPublickeyTest?paramMap=${paramMap}
 #    paramMap=ccprepare:UserPasswordLoginTest?paramMap=${paramMap}&phoneNumber=${phoneNumber}&password=${password}
 #    paramMap=ccprepare:WalletTabHomeTest?paramMap=${paramMap}&akuFlag=${akuFlag}

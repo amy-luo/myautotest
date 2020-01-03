@@ -1,16 +1,13 @@
 package com.mytest.function.base;
 
 import com.mytest.function.api.base.CCPrepare;
-import com.mytest.function.testcase.Inface.TestLogic;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.lf5.util.Resource;
 import org.apache.log4j.lf5.util.ResourceUtils;
-import org.reflections.Reflections;
-import org.reflections.scanners.MethodAnnotationsScanner;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
@@ -41,44 +38,47 @@ public class FunctionBase {
 
 
     @Test(dataProvider = "myDataProvider")
-    public void test(TestData testData){
-        TestLogicRepository testLogicRepository=new TestLogicRepository();
-        HashMap<String, HashMap<String, String>> map=testLogicRepository.loadTestLogic(testData);
-        Set<String> key=map.keySet();
-        for(String api:key){
-            HashMap<String,String> params=map.get(api);
-            Set<String> s=params.keySet();
-            HashMap<String, Object> paramMap = new HashMap<>();
-            for(String methodParam:s) {
-                String dataParam = params.get(methodParam);
-                Object dataParam1 = testData.getDataItem(dataParam);
-                paramMap.put(methodParam, dataParam1);
-            }
-            try {
-                Class c = Class.forName(api);
-                Method[] methods = c.getDeclaredMethods();
-                for (Method method : methods) {
-                    CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
-                    if(ccPrepare.id().equalsIgnoreCase(api)){
-                        try {
-                            Object object = method.getDeclaringClass().newInstance();
-                            method.invoke(object,paramMap);
-                            break;
-                        } catch (InvocationTargetException e) {
-                            e.printStackTrace();
-                            Assert.assertTrue(false);
+    public void test(TestData testData) {
+        TestLogicRepository testLogicRepository = new TestLogicRepository();
+        HashMap<ArrayList<String>, HashMap<String, HashMap<String, String>>> map = testLogicRepository.loadTestLogic(testData);
+        Set<ArrayList<String>> key = map.keySet();
+        for (ArrayList<String> k : key) {
+            List apiList = k;
+            HashMap<String, HashMap<String, String>> map2 = map.get(k);
+            for (int i = 0; i < k.size(); i++) {
+                String api = k.get(i);
+                HashMap<String, String> dataMap = map2.get(api);
+                HashMap<String, Object> paramMap = new HashMap<>();
+                for (String methodParam : dataMap.keySet()) {
+                    String dataParam = dataMap.get(methodParam);
+                    Object dataParam1 = testData.getDataItem(dataParam);
+                    paramMap.put(methodParam, dataParam1);
+                }
+                try {
+                    Class c = Class.forName(api);
+                    Method[] methods = c.getDeclaredMethods();
+                    for (Method method : methods) {
+                        CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
+                        if (ccPrepare.id().equalsIgnoreCase(api)) {
+                            try {
+                                Object object = method.getDeclaringClass().newInstance();
+                                method.invoke(object, paramMap);
+                                break;
+                            } catch (InvocationTargetException e) {
+                                e.printStackTrace();
+                                Assert.assertTrue(false);
+                            }
                         }
                     }
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
                 }
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
             }
-        }
-        //利用java反射机制，从用例的相对路径推导出测试逻辑的路径，得到相应testData的logic方法，执行对应的测试逻辑；
+            //利用java反射机制，从用例的相对路径推导出测试逻辑的路径，得到相应testData的logic方法，执行对应的测试逻辑；
 //        String logicPackage =basePackage+"."+testData.getLogicPackage();
 //        Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(logicPackage)).setScanners(new MethodAnnotationsScanner()));
 //        Set<Method> methods = f.getMethodsAnnotatedWith(TestLogic.class);
@@ -95,6 +95,7 @@ public class FunctionBase {
 //                }
 //            }
 //        }
+        }
     }
 
     //加载listCase.yaml中的testcases，存入添加进List<String>

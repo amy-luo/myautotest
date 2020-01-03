@@ -2,8 +2,10 @@ package com.mytest.function.base;
 
 import org.apache.log4j.lf5.util.Resource;
 import org.yaml.snakeyaml.Yaml;
+
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,16 +15,17 @@ import java.util.List;
  */
 public class TestLogicRepository {
     TestLogic testLogic;
-    HashMap<String, HashMap<String, String>> map=new HashMap<>();
-    public HashMap<String, HashMap<String, String>> loadTestLogic(TestData testData) {
+    HashMap<ArrayList<String>, HashMap<String, HashMap<String,String>>> map=new HashMap<>();
+    public HashMap<ArrayList<String>, HashMap<String, HashMap<String,String>>> loadTestLogic(TestData testData) {
         File file = new File(new Resource(testData.getLogicPackage().replace(".","/")).getURL().getFile());
         File[] listFiles = file.listFiles();
         Yaml yaml = new Yaml();
         for (File logicYaml : listFiles) {
+            if(testLogic!=null){
+                break;}
             try {
-                if (logicYaml.getName().contains(".logic.yaml")) {
+                if (logicYaml.getName().contains("logic.yaml")) {
                     List<TestLogic> loadLogic = (List<TestLogic>)yaml.load(new FileInputStream(logicYaml));
-                    String s=loadLogic.toString();
                     for (TestLogic logic:loadLogic) {
                         if (logic.getLogicId().equals(testData.getLogicId())) {
                             testLogic=logic;
@@ -34,20 +37,22 @@ public class TestLogicRepository {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+
             }
-            if(testLogic.getLogicId()!=null&testLogic.getLogicId()!=""){
-                break;
-            }
+
         }
         return map;
     }
     //    ccils: |
-//    paramMap=ccprepare:CheckRegisteredUserAndSendOTPTest?phoneNumber=${phoneNumber}
-    public HashMap<String, HashMap<String,String>> getLogic(List<String> ccils){
-        HashMap<String, HashMap<String,String>> map=new HashMap<>();
-        for(String ccil: ccils){
-            String api=ccil.substring(ccil.indexOf("paramMap=ccprepare:")+1,ccil.indexOf("?"));
-            String params = ccil.substring(ccil.indexOf("?") + 1);
+//    paramMap=ccprepare:CheckRegisteredUserAndSendOTPApi?phoneNumber=${phoneNumber}
+    public HashMap<ArrayList<String>, HashMap<String, HashMap<String,String>>> getLogic(List<String> ccils){
+        ArrayList<String> apiList=new ArrayList<>();
+        HashMap<ArrayList<String>, HashMap<String, HashMap<String,String>>>map1=new HashMap<>();
+        HashMap<String, HashMap<String,String>> map2=new HashMap<>();
+        for(int i=0;i<ccils.size();i++){
+            String api=ccils.get(i).substring(19,ccils.get(i).indexOf("?"));
+            apiList.add(i,api);
+            String params = ccils.get(i).substring(ccils.get(i).indexOf("?") + 1);
             String[] paramSimple = params.split("&");
             HashMap<String,String> dataMap=new HashMap<String,String>();
             for(String param:paramSimple){
@@ -55,11 +60,11 @@ public class TestLogicRepository {
                 String methodParam=param.substring(0,param.indexOf("="));
                 //参数值
                 String dataParam=param.substring(param.indexOf("{")+1,param.indexOf("}"));
-//                TestData testData=new TestData();
                 dataMap.put(methodParam,dataParam);
             }
-            map.put(api,dataMap);
+            map2.put(api,dataMap);
         }
-        return map;
+        map1.put(apiList,map2);
+        return map1;
     }
 }

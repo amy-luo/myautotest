@@ -2,26 +2,21 @@ package com.mytest.function.api.otp;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.mytest.function.api.base.BaseInterfaceApi;
+import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
 import com.squareup.okhttp.*;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.ResourceBundle;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by yuyi191762 on 2018/12/10.
  * 正常登陆
  */
+@CCHost
+public class CheckRegisteredUserAndSendOTPApi {
 
-public class CheckRegisteredUserAndSendOTPTest{
-
-    @CCPrepare(id="CheckRegisteredUserAndSendOTPTest")
+    @CCPrepare(id="CheckRegisteredUserAndSendOTPApi")
     public static Map<String,String> checkRegisteredUserAndSendOTP(Map<String,String> paramMap){
         try {
         OkHttpClient client=new OkHttpClient();
