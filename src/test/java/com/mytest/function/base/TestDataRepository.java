@@ -1,6 +1,5 @@
 package com.mytest.function.base;
 
-import org.apache.log4j.Logger;
 import org.apache.log4j.lf5.util.Resource;
 import org.yaml.snakeyaml.Yaml;
 
@@ -27,6 +26,16 @@ public class TestDataRepository {
         }
         allCase = new ArrayList<>(set);
         subCase = allCase.stream().collect(Collectors.groupingBy(TestData::getLogicId));
+
+//        for (TestData t : allCase){
+//            List<TestData> testDataList = subCase.get(t.getLogicId());
+//            if (null == testDataList){
+//                testDataList = new ArrayList<>();
+//                subCase.put(t.getLogicId(), testDataList);
+//            }
+//
+//            testDataList.add(t);
+//        }
     }
 
     //将指定file里面的yaml文件解析成TestData数据模型，放入Set<TestData>中；
@@ -46,6 +55,7 @@ public class TestDataRepository {
                     final String logicPackagePath = filePath.substring(filePath.indexOf("testcase"),filePath.indexOf(fileName)-1).replace(File.separator,".");
                     load.stream().forEach(data->data.setLogicPackage(logicPackagePath));
                     testData.addAll(load);
+                    System.out.println(testData);
                 }
             }catch (Exception e){
                 e.printStackTrace();
