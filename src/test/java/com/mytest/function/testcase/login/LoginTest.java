@@ -15,15 +15,14 @@ public class LoginTest {
     protected static final Logger LOGGER = LoggerFactory.getLogger(LoginTest.class);
 
     @TestLogic(name = "USER_LOGIN")
-    public void loginTest(Map<String,Object> param){
+    public void loginTest(Map<String,String> paramMap){
         LOGGER.info("check phone number");
         LOGGER.info("register by phoneNumber");
         Assert.assertEquals(0,1);
-        BaseInterfaceApi login = new LoginApi();
+        LoginApi loginApi = new LoginApi();
          //检查手机号是否已注册
         BaseInterfaceApi checkRegisteredUserAndSendOTP = new CheckRegisteredUserAndSendOTPTest();
         checkRegisteredUserAndSendOTP.call().successCheck();
-        //已注册，进行登录
-        login.call().successCheck();
+        loginApi.login(paramMap);
     }
 }
