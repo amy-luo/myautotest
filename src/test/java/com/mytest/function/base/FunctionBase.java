@@ -4,6 +4,10 @@ import com.mytest.function.api.base.CCPrepare;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.lf5.util.Resource;
 import org.apache.log4j.lf5.util.ResourceUtils;
+import org.reflections.Reflections;
+import org.reflections.scanners.MethodAnnotationsScanner;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -19,7 +23,7 @@ import java.util.*;
 public class FunctionBase {
 
    static String fileName = "testcase/listCase.yaml";
-   final static String basePackage = "com.mytest.function";
+   final static String basePackage = "com.mytest.function.api";
     @BeforeClass
     public void init(){
         initLog();
@@ -40,29 +44,34 @@ public class FunctionBase {
     @Test(dataProvider = "myDataProvider")
     public void test(TestData testData) {
         TestLogicRepository testLogicRepository = new TestLogicRepository();
-        HashMap<ArrayList<String>, HashMap<String, HashMap<String, String>>> map = testLogicRepository.loadTestLogic(testData);
+        HashMap<ArrayList<String>, HashMap<String, List<HashMap<String,String>>>> map = testLogicRepository.loadTestLogic(testData);
         Set<ArrayList<String>> key = map.keySet();
+        HashMap<String, Object> paramMap = new HashMap<>(testData.getDataItems());
         for (ArrayList<String> k : key) {
             List apiList = k;
-            HashMap<String, HashMap<String, String>> map2 = map.get(k);
+            HashMap<String, List<HashMap<String,String>>> map2 = map.get(k);
             for (int i = 0; i < k.size(); i++) {
                 String api = k.get(i);
-                HashMap<String, String> dataMap = map2.get(api);
-                HashMap<String, Object> paramMap = new HashMap<>();
+                List<HashMap<String, String>> totalList = map2.get(api);
+                HashMap<String,String> preApiMap=totalList.get(0);
+                HashMap<String,String> dataMap=totalList.get(1);
+                String returnParamMap=preApiMap.get("returnParamMap");
+                String annotation=preApiMap.get("annotation");
                 for (String methodParam : dataMap.keySet()) {
                     String dataParam = dataMap.get(methodParam);
                     Object dataParam1 = testData.getDataItem(dataParam);
                     paramMap.put(methodParam, dataParam1);
                 }
                 try {
-                    Class c = Class.forName(api);
-                    Method[] methods = c.getDeclaredMethods();
+                    Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(basePackage)).setScanners(new MethodAnnotationsScanner()));
+                    Set<Method> methods = f.getMethodsAnnotatedWith(CCPrepare.class);
                     for (Method method : methods) {
                         CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
                         if (ccPrepare.id().equalsIgnoreCase(api)) {
                             try {
-                                Object object = method.getDeclaringClass().newInstance();
-                                method.invoke(object, paramMap);
+//                                Object object = method.getDeclaringClass().newInstance();
+                                Class c = method.getDeclaringClass();
+                                paramMap=(HashMap<String, Object>) method.invoke(c, paramMap);
                                 break;
                             } catch (InvocationTargetException e) {
                                 e.printStackTrace();
@@ -70,31 +79,15 @@ public class FunctionBase {
                             }
                         }
                     }
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
+                    Assert.assertTrue(false);
                 }
-            }
-            //利用java反射机制，从用例的相对路径推导出测试逻辑的路径，得到相应testData的logic方法，执行对应的测试逻辑；
-//        String logicPackage =basePackage+"."+testData.getLogicPackage();
-//        Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(logicPackage)).setScanners(new MethodAnnotationsScanner()));
-//        Set<Method> methods = f.getMethodsAnnotatedWith(TestLogic.class);
-//        for(Method method:methods){
-//            TestLogic logic = method.getAnnotation(TestLogic.class);
-//            if(logic.name().equalsIgnoreCase(testData.getLogicId())){
-//                try {
-//                    Object object = method.getDeclaringClass().newInstance();
-//                    method.invoke(object,testData.getDataItems());
-//                    break;
-//                }catch (Exception e){
+//                } catch (InstantiationException e) {
 //                    e.printStackTrace();
 //                    Assert.assertTrue(false);
 //                }
-//            }
-//        }
+            }
         }
     }
 
