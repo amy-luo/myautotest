@@ -2,6 +2,8 @@ package com.mytest.function.api.otp;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -11,7 +13,7 @@ import java.util.Map;
  */
 @CCHost
 public class CheckRegisteredUserAndSendOTPApi {
-
+    Logger logger= LoggerFactory.getLogger(CheckRegisteredUserAndSendOTPApi.class);
     @CCPrepare(id="CheckRegisteredUserAndSendOTPApi")
     public static Map<String,String> checkRegisteredUserAndSendOTP(Map<String,String> paramMap){
 //        try {

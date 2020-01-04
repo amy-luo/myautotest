@@ -5,6 +5,8 @@ package com.mytest.function.api.otp;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -15,6 +17,7 @@ import java.util.Map;
  */
 @CCHost
 public class SecurityVerifyOtpApi {
+    Logger logger= LoggerFactory.getLogger(SecurityVerifyOtpApi.class);
     @CCPrepare(id="SecurityVerifyOtpApi")
     public static Map<String,String> securityVerifyOtp(Map<String,String> paramMap){
         paramMap.put("2","2");

@@ -8,6 +8,7 @@ import org.reflections.Reflections;
 import org.reflections.scanners.MethodAnnotationsScanner;
 import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -20,7 +21,8 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.*;
 
-public class FunctionBase {
+public class FunctionBaseStarter {
+    org.slf4j.Logger logger= LoggerFactory.getLogger(FunctionBaseStarter.class);
 
    static String fileName = "testcase/listCase.yaml";
    final static String basePackage = "com.mytest.function.api";
@@ -70,8 +72,10 @@ public class FunctionBase {
                         if (ccPrepare.id().equalsIgnoreCase(api)) {
                             try {
 //                                Object object = method.getDeclaringClass().newInstance();
+                                logger.info("正在执行"+api);
                                 Class c = method.getDeclaringClass();
                                 paramMap=(HashMap<String, Object>) method.invoke(c, paramMap);
+                                logger.info(api+"执行成功");
                                 break;
                             } catch (InvocationTargetException e) {
                                 e.printStackTrace();
