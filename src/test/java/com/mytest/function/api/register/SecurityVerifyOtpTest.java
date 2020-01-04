@@ -10,11 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-/**
- * Created by LIMSHEN
- * Date: 20/1/4
- * Time: 01:00
- */
 @CCHost
 public class SecurityVerifyOtpTest {
     protected static final Logger logger= LoggerFactory.getLogger(SecurityVerifyOtpTest.class);

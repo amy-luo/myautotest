@@ -7,10 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-/**
- * Created by yuyi191762 on 2018/12/10.
- * 正常登陆
- */
 @CCHost
 public class CheckRegisteredUserAndSendOTPTest {
     protected static final Logger logger= LoggerFactory.getLogger(CheckRegisteredUserAndSendOTPTest.class);
