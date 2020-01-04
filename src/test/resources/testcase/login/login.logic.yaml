@@ -1,0 +1,5 @@
+- !!com.mytest.function.base.TestLogic
+  logicId: USER_LOGIN
+  description: SKY正常登陆
+  ccils:
+    - LoginTest
