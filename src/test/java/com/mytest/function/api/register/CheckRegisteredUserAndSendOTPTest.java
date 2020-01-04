@@ -1,4 +1,4 @@
-package com.mytest.function.api.otp;
+package com.mytest.function.api.register;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
@@ -12,10 +12,10 @@ import java.util.Map;
  * 正常登陆
  */
 @CCHost
-public class CheckRegisteredUserAndSendOTPApi {
-    Logger logger= LoggerFactory.getLogger(CheckRegisteredUserAndSendOTPApi.class);
-    @CCPrepare(id="CheckRegisteredUserAndSendOTPApi")
-    public static Map<String,String> checkRegisteredUserAndSendOTP(Map<String,String> paramMap){
+public class CheckRegisteredUserAndSendOTPTest {
+    protected static final Logger logger= LoggerFactory.getLogger(CheckRegisteredUserAndSendOTPTest.class);
+    @CCPrepare(id="CheckRegisteredUserAndSendOTPTest")
+    public static Map<String,Object> checkRegisteredUserAndSendOTP(Map<String,Object> paramMap){
 //        try {
 //        OkHttpClient client=new OkHttpClient();
 //        String url="";

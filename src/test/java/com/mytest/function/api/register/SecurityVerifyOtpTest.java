@@ -1,7 +1,7 @@
 /*
 * Copyright (c) 2016 xiaoyouzi.com. All Rights Reserved.
 */
-package com.mytest.function.api.otp;
+package com.mytest.function.api.register;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
@@ -16,10 +16,10 @@ import java.util.Map;
  * Time: 01:00
  */
 @CCHost
-public class SecurityVerifyOtpApi {
-    Logger logger= LoggerFactory.getLogger(SecurityVerifyOtpApi.class);
-    @CCPrepare(id="SecurityVerifyOtpApi")
-    public static Map<String,String> securityVerifyOtp(Map<String,String> paramMap){
+public class SecurityVerifyOtpTest {
+    protected static final Logger logger= LoggerFactory.getLogger(SecurityVerifyOtpTest.class);
+    @CCPrepare(id="SecurityVerifyOtpTest")
+    public static Map<String,Object> securityVerifyOtp(Map<String,Object> paramMap){
         paramMap.put("2","2");
         return paramMap;
     }

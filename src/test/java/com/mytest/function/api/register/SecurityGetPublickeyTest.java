@@ -1,7 +1,7 @@
 /*
 * Copyright (c) 2016 xiaoyouzi.com. All Rights Reserved.
 */
-package com.mytest.function.api.otp;
+package com.mytest.function.api.register;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
@@ -16,10 +16,10 @@ import java.util.Map;
  * Time: 01:01
  */
 @CCHost
-public class SecurityGetPublickeyApi {
-    Logger logger= LoggerFactory.getLogger(SecurityGetPublickeyApi.class);
-    @CCPrepare(id="SecurityGetPublickeyApi")
-    public static Map<String,String> securityGetPublickey(Map<String,String> paramMap){
+public class SecurityGetPublickeyTest {
+    protected static final Logger logger= LoggerFactory.getLogger(SecurityGetPublickeyTest.class);
+    @CCPrepare(id="SecurityGetPublickeyTest")
+    public static Map<String,Object> securityGetPublickey(Map<String,Object> paramMap){
 
         paramMap.put("3","3");
         return paramMap;

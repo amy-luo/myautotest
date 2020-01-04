@@ -46,38 +46,23 @@ public class FunctionBaseStarter {
     @Test(dataProvider = "myDataProvider")
     public void test(TestData testData) {
         TestLogicRepository testLogicRepository = new TestLogicRepository();
-        HashMap<ArrayList<String>, HashMap<String, List<HashMap<String,String>>>> map = testLogicRepository.loadTestLogic(testData);
-        Set<ArrayList<String>> key = map.keySet();
+        List<String> ccils = testLogicRepository.loadTestLogic(testData);
         HashMap<String, Object> paramMap = new HashMap<>(testData.getDataItems());
-        for (ArrayList<String> k : key) {
-            List apiList = k;
-            HashMap<String, List<HashMap<String,String>>> map2 = map.get(k);
-            for (int i = 0; i < k.size(); i++) {
-                String api = k.get(i);
-                List<HashMap<String, String>> totalList = map2.get(api);
-                HashMap<String,String> preApiMap=totalList.get(0);
-                HashMap<String,String> dataMap=totalList.get(1);
-                String returnParamMap=preApiMap.get("returnParamMap");
-                String annotation=preApiMap.get("annotation");
-                for (String methodParam : dataMap.keySet()) {
-                    String dataParam = dataMap.get(methodParam);
-                    Object dataParam1 = testData.getDataItem(dataParam);
-                    paramMap.put(methodParam, dataParam1);
-                }
-                try {
-                    Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(basePackage)).setScanners(new MethodAnnotationsScanner()));
-                    Set<Method> methods = f.getMethodsAnnotatedWith(CCPrepare.class);
-                    for (Method method : methods) {
-                        CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
-                        if (ccPrepare.id().equalsIgnoreCase(api)) {
-                            try {
-//                                Object object = method.getDeclaringClass().newInstance();
-                                logger.info("正在执行"+api);
-                                Class c = method.getDeclaringClass();
-                                paramMap=(HashMap<String, Object>) method.invoke(c, paramMap);
-                                logger.info(api+"执行成功");
-                                break;
-                            } catch (InvocationTargetException e) {
+        for (int i=0;i<ccils.size();i++) {
+            String api = ccils.get(i);
+            try {
+                Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(basePackage)).setScanners(new MethodAnnotationsScanner()));
+                Set<Method> methods = f.getMethodsAnnotatedWith(CCPrepare.class);
+                for (Method method : methods) {
+                    CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
+                    if (ccPrepare.id().equalsIgnoreCase(api)) {
+//                      Object object = method.getDeclaringClass().newInstance();
+                        try {logger.info("开始执行! api= "+api);
+                            Class clazz = method.getDeclaringClass();
+                            paramMap = (HashMap<String, Object>) method.invoke(clazz,paramMap);
+                            logger.info("执行成功! api= "+api);
+                            break;
+                        } catch (InvocationTargetException e) {
                                 e.printStackTrace();
                                 Assert.assertTrue(false);
                             }
@@ -93,7 +78,57 @@ public class FunctionBaseStarter {
 //                }
             }
         }
-    }
+//    public void test(TestData testData) {
+//        TestLogicRepository testLogicRepository = new TestLogicRepository();
+//        HashMap<ArrayList<String>, HashMap<String, List<HashMap<String, String>>>> map = testLogicRepository.loadTestLogic(testData);
+//        Set<ArrayList<String>> key = map.keySet();
+//        HashMap<String, Object> paramMap = new HashMap<>(testData.getDataItems());
+//        for (ArrayList<String> k : key) {
+//            List apiList = k;
+//            HashMap<String, List<HashMap<String, String>>> map2 = map.get(k);
+//            for (int i = 0; i < k.size(); i++) {
+//                String api = k.get(i);
+//                List<HashMap<String, String>> totalList = map2.get(api);
+//                HashMap<String, String> preApiMap = totalList.get(0);
+//                HashMap<String, String> dataMap = totalList.get(1);
+//                String returnParamMap = preApiMap.get("returnParamMap");
+//                String annotation = preApiMap.get("annotation");
+//                ArrayList<Object> dataList=new ArrayList<>();
+//                for (String methodParam : dataMap.keySet()) {
+//                    String dataParam = dataMap.get(methodParam);
+//                    Object dataParam1 = testData.getDataItem(dataParam);
+//                    paramMap.put(methodParam, dataParam1);
+//                }
+//                    try {
+//                        Reflections f = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(basePackage)).setScanners(new MethodAnnotationsScanner()));
+//                        Set<Method> methods = f.getMethodsAnnotatedWith(CCPrepare.class);
+//                        for (Method method : methods) {
+//                            CCPrepare ccPrepare = method.getAnnotation(CCPrepare.class);
+//                            if (ccPrepare.id().equalsIgnoreCase(api)) {
+//                                try {
+////                                Object object = method.getDeclaringClass().newInstance();
+//                                    logger.info("开始执行! api= "+api);
+//                                    Class clazz = method.getDeclaringClass();
+//                                    paramMap = (HashMap<String, Object>) method.invoke(clazz,paramMap);
+//                                    logger.info("执行成功! api= "+api);
+//                                    break;
+//                                } catch (InvocationTargetException e) {
+//                                    e.printStackTrace();
+//                                    Assert.assertTrue(false);
+//                                }
+//                            }
+//                        }
+//                    } catch (IllegalAccessException e) {
+//                        e.printStackTrace();
+//                        Assert.assertTrue(false);
+//                    }
+////                } catch (InstantiationException e) {
+////                    e.printStackTrace();
+////                    Assert.assertTrue(false);
+////                }
+//                }
+//            }
+//        }
 
     //加载listCase.yaml中的testcases，存入添加进List<String>
     public List<String> loadTestCase(){

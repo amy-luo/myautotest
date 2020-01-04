@@ -1,7 +1,7 @@
 /*
 * Copyright (c) 2016 xiaoyouzi.com. All Rights Reserved.
 */
-package com.mytest.function.api.otp;
+package com.mytest.function.api.register;
 
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
@@ -16,10 +16,10 @@ import java.util.Map;
  * Time: 01:01
  */
 @CCHost
-public class SkyRegisterRegisterApi {
-    Logger logger= LoggerFactory.getLogger(SkyRegisterRegisterApi.class);
-    @CCPrepare(id="SkyRegisterRegisterApi")
-    public static Map<String,String> skyRegisterRegister(Map<String,String> paramMap){
+public class SkyRegisterRegisterTest {
+    protected static final Logger logger= LoggerFactory.getLogger(SkyRegisterRegisterTest.class);
+    @CCPrepare(id="SkyRegisterRegisterTest")
+    public static Map<String,Object> skyRegisterRegister(Map<String,Object> paramMap){
 //        String env=
         paramMap.put("4","4");
         return paramMap;
