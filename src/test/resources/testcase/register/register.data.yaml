@@ -1,4 +1,4 @@
-- !!com.mytest.function.base.TestData
+- !!com.mytest.function.Utils.TestData
   logicId: USER_REGISTER
   dataId: USER_REGISTER_01
   description: register user
@@ -9,7 +9,7 @@
       ctoken:
       userId:
 
-- !!com.mytest.function.base.TestData
+- !!com.mytest.function.Utils.TestData
   logicId: USER_REGISTER
   dataId: USER_REGISTER_02
   description: register user

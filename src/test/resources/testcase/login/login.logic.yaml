@@ -1,4 +1,4 @@
-- !!com.mytest.function.base.TestLogic
+- !!com.mytest.function.Utils.TestLogic
   logicId: USER_LOGIN
   description: SKY正常登陆
   ccils:

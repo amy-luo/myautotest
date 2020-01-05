@@ -1,4 +1,4 @@
-package com.mytest.function.base;
+package com.mytest.function.Utils;
 
 import org.apache.log4j.lf5.util.Resource;
 import org.yaml.snakeyaml.Yaml;

@@ -1,4 +1,4 @@
-- !!com.mytest.function.base.TestLogic
+- !!com.mytest.function.Utils.TestLogic
   logicId: USER_REGISTER
   description: SKY正常注册
   ccils:

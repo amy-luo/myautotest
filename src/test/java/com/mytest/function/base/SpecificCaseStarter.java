@@ -1,5 +1,9 @@
 package com.mytest.function.base;
 
+import com.mytest.function.Utils.MyDataProvider;
+import com.mytest.function.Utils.TestData;
+import com.mytest.function.Utils.TestDataRepository;
+import com.mytest.function.Utils.TestLogicRepository;
 import com.mytest.function.api.base.CCPrepare;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.lf5.util.Resource;
@@ -21,8 +25,8 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.*;
 
-public class FunctionBaseStarter {
-    org.slf4j.Logger logger= LoggerFactory.getLogger(FunctionBaseStarter.class);
+public class SpecificCaseStarter {
+    org.slf4j.Logger logger= LoggerFactory.getLogger(SpecificCaseStarter.class);
 
    static String fileName = "testcase/listCase.yaml";
    final static String basePackage = "com.mytest.function.api";
@@ -39,6 +43,11 @@ public class FunctionBaseStarter {
 
     @DataProvider(name = "myDataProvider")
     public Iterator<Object[]> batchDataProvider(Method method) {
+        return new MyDataProvider(loadTestData(loadTestCase()));
+    }
+
+    @DataProvider(name = "myDataProvider_all")
+    public Iterator<Object[]> batchDataProvider_all(Method method) {
         return new MyDataProvider(loadTestData(loadTestCase()));
     }
 
@@ -154,5 +163,10 @@ public class FunctionBaseStarter {
     public List<TestData> loadTestData(List<String> testCase){
         TestDataRepository testDataRepository = new TestDataRepository();
         return testDataRepository.getCaseData(testCase);
+    }
+
+    public List<TestData> loadTestData(){
+        TestDataRepository testDataRepository = new TestDataRepository();
+        return testDataRepository.getCaseData();
     }
 }

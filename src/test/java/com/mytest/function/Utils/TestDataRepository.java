@@ -1,4 +1,4 @@
-package com.mytest.function.base;
+package com.mytest.function.Utils;
 
 import org.apache.log4j.lf5.util.Resource;
 import org.yaml.snakeyaml.Yaml;
@@ -65,9 +65,9 @@ public class TestDataRepository {
         return testData;
     }
 
-    public List<TestData> getCaseData(String logicId){
-
-        return null;
+    public List<TestData> getCaseData(){
+        loadAll();
+        return allCase;
     }
 
     //将指定的yaml文件（例如listcase中的用例对应的yaml文件）的testcases的解析成TestData数据模型，放入List<TestData>中；

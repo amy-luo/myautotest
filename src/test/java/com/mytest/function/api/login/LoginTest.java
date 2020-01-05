@@ -1,5 +1,6 @@
 package com.mytest.function.api.login;
 
+import com.mytest.function.Utils.LoadConfig;
 import com.mytest.function.api.base.CCHost;
 import com.mytest.function.api.base.CCPrepare;
 import org.slf4j.Logger;
@@ -12,6 +13,8 @@ public class LoginTest {
     protected static final Logger logger= LoggerFactory.getLogger(LoginTest.class);
     @CCPrepare(id="LoginTest")
     public static Map<String,Object> login(Map<String,Object> paramMap){
+        LoadConfig loadConfig=new LoadConfig();
+        String env=loadConfig.getConfig("env");
         paramMap.toString();
         String phoneNumber=(String)paramMap.get("phoneNumber");
         String password=(String)paramMap.get("password");

@@ -1,4 +1,4 @@
-package com.mytest.function.base;
+package com.mytest.function.Utils;
 
 import java.io.Serializable;
 import java.util.HashMap;
