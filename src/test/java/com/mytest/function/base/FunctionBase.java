@@ -1,7 +1,6 @@
 package com.mytest.function.base;
 
 import com.mytest.function.api.base.CCPrepare;
-import com.mytest.function.testcase.Inface.TestLogic;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.lf5.util.Resource;
 import org.apache.log4j.lf5.util.ResourceUtils;
