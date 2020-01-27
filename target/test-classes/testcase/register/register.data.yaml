@@ -1,15 +1,17 @@
-- !!com.mytest.function.base.TestData
+- !!com.mytest.function.Utils.TestData
   logicId: USER_REGISTER
-  dataId: USER_REGISTER
+  dataId: USER_REGISTER_01
   description: register user
-  dataCache: true
   dataItems:
     phoneNumber: '811245164'
     password: '123123'
+    paramMap:
+      ctoken:
+      userId:
 
-- !!com.mytest.function.base.TestData
+- !!com.mytest.function.Utils.TestData
   logicId: USER_REGISTER
-  dataId: USER_REGISTER2
+  dataId: USER_REGISTER_02
   description: register user
   dataCache: true
   dataItems:

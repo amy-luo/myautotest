@@ -1,4 +1,4 @@
-package com.mytest.function.base;
+package com.mytest.function.Utils;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -11,10 +11,10 @@ import java.util.List;
 public class TestLogic implements Serializable {
     private static final long serialVersionUID = -8000834036334086502L;
     private String logicId;
+    private String description;
     private HashMap<String, Object> ccils = new HashMap<>();
     HashMap<String, HashMap<String, String>> logicMap = new HashMap<String, HashMap<String, String>>();
     private String logicPackage;
-    private String description;
 
     //设置并获取LogicPackage
     public String getLogicPackage() {
@@ -39,14 +39,19 @@ public class TestLogic implements Serializable {
     public void setCcils(List<String> value) { this.ccils.put("ccils",value);}
 
     //设置并获取logicId
+    public String getDescription() {
+        return this.logicId;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getLogicId() {
         return this.logicId;
     }
     public void setLogicId(String logicId) {
         this.logicId = logicId;
     }
-
-
 
     public int hashCode() {
         return (this.logicId).hashCode();
