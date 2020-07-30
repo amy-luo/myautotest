@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="服务端自动化测试" duration-ms="450" started-at="2020-01-05T14:02:39Z" finished-at="2020-01-05T14:02:39Z">
+  <suite name="服务端自动化测试" duration-ms="294" started-at="2020-01-29T03:46:32Z" finished-at="2020-01-29T03:46:33Z">
     <groups>
     </groups>
-    <test name="服务端自动化测试" duration-ms="450" started-at="2020-01-05T14:02:39Z" finished-at="2020-01-05T14:02:39Z">
+    <test name="服务端自动化测试" duration-ms="294" started-at="2020-01-29T03:46:32Z" finished-at="2020-01-29T03:46:33Z">
       <class name="com.mytest.function.base.FunctionTestBase">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mytest.function.base.FunctionTestBase@32d992b2]" name="init" is-config="true" duration-ms="12" started-at="2020-01-05T22:02:39Z" finished-at="2020-01-05T22:02:39Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mytest.function.base.FunctionTestBase@6d78f375]" name="init" is-config="true" duration-ms="7" started-at="2020-01-29T11:46:32Z" finished-at="2020-01-29T11:46:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@32d992b2]" name="test" duration-ms="160" started-at="2020-01-05T22:02:39Z" data-provider="myDataProvider_all" finished-at="2020-01-05T22:02:39Z">
+        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@6d78f375]" name="test" duration-ms="83" started-at="2020-01-29T11:46:32Z" data-provider="myDataProvider_all" finished-at="2020-01-29T11:46:33Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@32d992b2]" name="test" duration-ms="49" started-at="2020-01-05T22:02:39Z" data-provider="myDataProvider_all" finished-at="2020-01-05T22:02:39Z">
+        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@6d78f375]" name="test" duration-ms="52" started-at="2020-01-29T11:46:33Z" data-provider="myDataProvider_all" finished-at="2020-01-29T11:46:33Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@32d992b2]" name="test" duration-ms="43" started-at="2020-01-05T22:02:39Z" data-provider="myDataProvider_all" finished-at="2020-01-05T22:02:39Z">
+        <test-method status="PASS" signature="test(com.mytest.function.Utils.TestData)[pri:0, instance:com.mytest.function.base.FunctionTestBase@6d78f375]" name="test" duration-ms="43" started-at="2020-01-29T11:46:33Z" data-provider="myDataProvider_all" finished-at="2020-01-29T11:46:33Z">
           <params>
             <param index="0">
               <value>
