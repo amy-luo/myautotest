@@ -1,20 +1,10 @@
-package com.mytest.function.Utils;
+package com.mytest.function.api.xueqiu;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mytest.function.api.xueqiu.PE_PB_Time;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.poifs.filesystem.POIFSDocument;
-import org.apache.poi.poifs.filesystem.POIFSDocumentPath;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
@@ -25,6 +15,8 @@ public class PoiRead {
 
     public ArrayList<String> getCodes(String filePath) throws IOException {
         ArrayList<String> codes = new ArrayList();
+        ArrayList<String> names = new ArrayList();
+
         File file = new File(filePath);
         FileInputStream in = new FileInputStream(file);
         XSSFWorkbook workbook = new XSSFWorkbook(in);
@@ -48,6 +40,7 @@ public class PoiRead {
             for (int row = 1; row < rows; row++) {
                 Row r = sheet.getRow(row);
                 codes.add(r.getCell(0).toString());
+                names.add(r.getCell(0).toString());
             }
 
 //            int cols = tmp.getPhysicalNumberOfCells();
@@ -61,6 +54,7 @@ public class PoiRead {
 //            }
         }
         logger.info(codes.toString());
+        logger.info(names.toString());
         return codes;
     }
     public static void main(String[] args) throws IOException {

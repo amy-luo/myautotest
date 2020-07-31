@@ -5,7 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class PE_PB_Time {
@@ -77,29 +79,33 @@ public class PE_PB_Time {
             allDataList.add(map);
         }
         //所有symbol的时间set
-        Object[] dates = allDataList.get(0).keySet().toArray();
+        ArrayList<String> dates=new ArrayList();
+        dates.addAll(allDataList.get(0).keySet());
 
         //计算PE/PB的算术平均值和加权平均值,与日期的对应关系
         Map<String, ArrayList<Double>> dateMap=new HashMap<>();
+        Map<String,BigDecimal> peMap=new HashMap<>();
+        Map<String,BigDecimal> pbMap=new HashMap<>();
+        BigDecimal total_guben=new BigDecimal(0);
+        String pe_baifen="";
+        String jiaquan_avg_pe="";
+        BigDecimal total_jiaquan_pe=new BigDecimal(0);
+        String pb_baifen="";
+        String jiaquan_avg_pb="";
+        BigDecimal total_jiaquan_pb=new BigDecimal(0);
         for (Object date : dates) {
-            BigDecimal total_market_capital=new BigDecimal(0);
-            double avg_pe=0.0;
-            double total_pe=0.0;
-
-            String jiaquan_avg_pe="";
-            BigDecimal total_jiaquan_pe=new BigDecimal(0);
-
-            double avg_pb=0.0;
-            double total_pb=0.0;
-
-            String jiaquan_avg_pb="";
-            BigDecimal total_jiaquan_pb=new BigDecimal(0);
             int count=allDataList.size();
+            double total_pe=0.0;
+            double avg_pe=0.0;
+            double total_pb=0.0;
+            double avg_pb=0.0;
+
+            BigDecimal pe=new BigDecimal(0);
+            BigDecimal pb=new BigDecimal(0);
+            BigDecimal close=new BigDecimal(0);
+            BigDecimal market_capital=new BigDecimal(0);
             for (Map<String, Map<String, Object>> submap:allDataList) {
                 //找出单个的pe/pb/market_capital
-                BigDecimal pe=new BigDecimal(0);
-                BigDecimal pb=new BigDecimal(0);
-                BigDecimal market_capital=new BigDecimal(0);
                 if(null == submap.get(date.toString())){count=count-1;}
                 if (null != submap.get(date.toString())) {
                     for (Map.Entry entry : (submap.get(date.toString())).entrySet()) {
@@ -109,6 +115,7 @@ public class PE_PB_Time {
                             if (null != entry.getValue()) {
                                 pe = (BigDecimal)entry.getValue();
 //                                logger.info(pe.toString());
+                                peMap.put(date.toString(),pe);
                                 total_pe += Double.parseDouble(pe.toString());
                             }
                         }
@@ -116,57 +123,84 @@ public class PE_PB_Time {
                             if (null != entry.getValue()) {
                                 pb = (BigDecimal)entry.getValue();
 //                                logger.info(pb.toString());
+                                pbMap.put(date.toString(),pb);
                                 total_pb += Double.parseDouble(pb.toString());
+                            }
+                        }
+                        if (entry.getKey().toString().equals("close")) {
+                            if (null != entry.getValue()) {
+                                close = (BigDecimal)entry.getValue();
+//                                logger.info(pb.toString());
                             }
                         }
                         if (entry.getKey().toString().equals("market_capital")) {
                             if (null != entry.getValue()) {
                                 market_capital = (BigDecimal)entry.getValue();
 //                                logger.info(market_capital.toString());
-                                if(null!=market_capital) {
-                                    total_market_capital=total_market_capital.add(market_capital);
-                                }
+
                             }
                         }
                     }
-                }
-                if(null!=pe&&null!=market_capital){
-                    total_jiaquan_pe=total_jiaquan_pe.add(pe.multiply(market_capital));
+                    BigDecimal guben=market_capital.divide(close, 6, BigDecimal.ROUND_HALF_UP);
+                    total_guben=total_guben.add(guben);
+                    if(null!=pe&&null!=guben){
+                        total_jiaquan_pe=total_jiaquan_pe.add(pe.multiply(guben));
 //                    logger.info(total_jiaquan_pe.toString());
-                }
-                if(null!=pb&&null!=market_capital) {
-                    total_jiaquan_pb=total_jiaquan_pb.add(pb.multiply(market_capital));
+                    }
+                    if(null!=pb&&null!=market_capital) {
+                        total_jiaquan_pb=total_jiaquan_pb.add(pb.multiply(guben));
 //                    logger.info(total_jiaquan_pb.toString());
+                    }
                 }
             }
             avg_pe=total_pe/count;
-            if(null!=total_jiaquan_pe&&null!=total_market_capital) {
-                jiaquan_avg_pe = String.valueOf((total_jiaquan_pe.divide(total_market_capital, 6, BigDecimal.ROUND_HALF_UP).toString()));
+            if(null!=total_jiaquan_pe&&null!=total_guben) {
+                jiaquan_avg_pe = String.valueOf((total_jiaquan_pe.divide(total_guben, 6, BigDecimal.ROUND_HALF_UP).toString()));
 //                logger.info(jiaquan_avg_pe);
             }
+
             avg_pb=total_pb/count;
-            if(null!=total_jiaquan_pb&&null!=total_market_capital) {
-                jiaquan_avg_pb = String.valueOf((total_jiaquan_pb.divide(total_market_capital, 6, BigDecimal.ROUND_HALF_UP).toString()));
+            if(null!=total_jiaquan_pb&&null!=total_guben) {
+                jiaquan_avg_pb = String.valueOf((total_jiaquan_pb.divide(total_guben, 6, BigDecimal.ROUND_HALF_UP).toString()));
 //                logger.info(jiaquan_avg_pb);
             }
             ArrayList peAndPbAverage = new ArrayList<String>();
-            peAndPbAverage.add(avg_pe);
-            peAndPbAverage.add(jiaquan_avg_pe);
-            peAndPbAverage.add(avg_pb);
-            peAndPbAverage.add(jiaquan_avg_pb);
-            logger.info("日期为："+date+"\nPE算术平均值为："+avg_pe+"\nPE加权平均值为："+jiaquan_avg_pe+ "\nPB算术平均值为："+avg_pb+"\nPB加权平均值为："+jiaquan_avg_pb+"\n总市值为："+total_market_capital);
+            peAndPbAverage.add(0,avg_pe);
+            peAndPbAverage.add(1,jiaquan_avg_pe);
+            peAndPbAverage.add(2,avg_pb);
+            peAndPbAverage.add(3,jiaquan_avg_pb);
+            logger.info("日期为："+date+"\nPE算术平均值为："+avg_pe+"\nPE加权平均值为："+jiaquan_avg_pe+" PE百分位为："+pe_baifen+"\nPB算术平均值为："+avg_pb+"\nPB加权平均值为："+jiaquan_avg_pb+"\nPB百分位为："+pb_baifen+"\n总市值为："+total_guben
+            );
             dateMap.put(date.toString(),peAndPbAverage);
             logger.info(dateMap.toString());
         }
+        BigDecimal maxPE=Collections.max(peMap.values());
+        BigDecimal minPE=Collections.min(peMap.values());
+        BigDecimal currentPE=peMap.get(Collections.max(dates));
+        pe_baifen=(((currentPE.subtract(minPE)).multiply(new BigDecimal(100))).divide((maxPE.subtract(minPE)),6, BigDecimal.ROUND_HALF_UP)).toString();
+
+        BigDecimal maxPB=Collections.max(pbMap.values());
+        BigDecimal minPB=Collections.min(pbMap.values());
+        BigDecimal currentPB=peMap.get(Collections.max(dates));;
+        pb_baifen=(((currentPB.subtract(minPB)).multiply(new BigDecimal(100))).divide((maxPB.subtract(minPB)),6, BigDecimal.ROUND_HALF_UP)).toString();
+        ArrayList<Double> baifenwei=new ArrayList<>();
+        baifenwei.add(0,Double.parseDouble(pe_baifen));
+        baifenwei.add(1,Double.parseDouble(pb_baifen));
+        dateMap.put("PE百分位",baifenwei);
         return dateMap;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         PE_PB_Time pe_pb_time=new PE_PB_Time();
-        ArrayList<String> symbols=new ArrayList<>();
-        symbols.add("SZ000768");
-        symbols.add("SH600760");
-        pe_pb_time.calculatePePbAvg(symbols);
+        String filePath="D:\\通达信\\T0002\\export\\上证5020200730.XLSX";
+        String filePathForWrite="D:\\通达信\\T0002\\export\\上证50统计.XLSX";
+//        String filePath="D:\\通达信\\T0002\\export\\中证50020200730.XLSX";
+        GetZhongZheng500Codes getZhongZheng500Codes=new GetZhongZheng500Codes();
+        ArrayList<String> symbols=getZhongZheng500Codes.codesForZhongZheng500(filePath);
+        logger.info(symbols.toString());
+        Map<String, ArrayList<Double>> dateMap=pe_pb_time.calculatePePbAvg(symbols);
+        PoiWriteUtil poiWriteUtil=new PoiWriteUtil();
+        poiWriteUtil.poiWrite(filePathForWrite,dateMap);
     }
 }
 

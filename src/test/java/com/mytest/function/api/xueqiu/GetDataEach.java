@@ -44,7 +44,7 @@ public class GetDataEach {
             String responseBody = response.body().string();
             try {
                 FileWriter fileWriter = null;
-                fileWriter = new FileWriter("/Users/wb-lyf518665/Downloads/xueqiuData.txt");//创建文本文件
+                fileWriter = new FileWriter("D:\\通达信\\T0002\\export\\xueqiuData.txt");//创建文本文件
                 fileWriter.write(responseBody);//写入 \r\n换行
                 fileWriter.flush();
                 fileWriter.close();
