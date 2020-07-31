@@ -37,10 +37,12 @@ public class PoiRead {
             if (tmp == null) {
                 continue;
             }
-            for (int row = 1; row < rows; row++) {
+            for (int row = 1; row < rows-2; row++) {
                 Row r = sheet.getRow(row);
+                if(null!=r.getCell(0)){
                 codes.add(r.getCell(0).toString());
                 names.add(r.getCell(0).toString());
+                }
             }
 
 //            int cols = tmp.getPhysicalNumberOfCells();
@@ -53,8 +55,6 @@ public class PoiRead {
 //                System.out.println();
 //            }
         }
-        logger.info(codes.toString());
-        logger.info(names.toString());
         return codes;
     }
     public static void main(String[] args) throws IOException {

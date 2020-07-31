@@ -2,6 +2,7 @@ package com.mytest.function.api.xueqiu;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ import org.apache.xmlbeans.GDate;
 import org.apache.xmlbeans.GDateBuilder;
 
 public class PoiWriteUtil {
-        public void poiWrite(String filePath, Map<String, ArrayList<Double>> dateMap) throws IOException
+        public void poiWrite(String filePath, Map<String, ArrayList<BigDecimal>> dateMap) throws IOException
         {
             // 创建工作薄
             XSSFWorkbook workbook = new XSSFWorkbook();
@@ -29,13 +30,17 @@ public class PoiWriteUtil {
             row0.createCell(2).setCellValue("PE加权平均值");
             row0.createCell(3).setCellValue("PB算术平均值");
             row0.createCell(4).setCellValue("PB加权平均值为");
-            row0.createCell(5).setCellValue("PE百分位");
-            row0.createCell(6).setCellValue("PB百分位");
+            row0.createCell(5).setCellValue("当前等权PE百分位");
+            row0.createCell(6).setCellValue("当前加权PE百分位");
+            row0.createCell(7).setCellValue("当前等权PB百分位");
+            row0.createCell(8).setCellValue("当前加权PE百分位");
             int i=1;
             for (Map.Entry entry:dateMap.entrySet()){
             if(entry.getKey().equals("PE百分位")){
-                row0.createCell(5).setCellValue("PE百分位= "+((ArrayList<Object>) (entry.getValue())).get(0).toString());
-                row0.createCell(6).setCellValue("PB百分位= "+((ArrayList<Object>) (entry.getValue())).get(1).toString());
+                row0.createCell(5).setCellValue("当前等权PE百分位= "+((ArrayList<Object>) (entry.getValue())).get(0).toString());
+                row0.createCell(6).setCellValue("当前加权PE百分位= "+((ArrayList<Object>) (entry.getValue())).get(1).toString());
+                row0.createCell(7).setCellValue("当前等权PB百分位= "+((ArrayList<Object>) (entry.getValue())).get(2).toString());
+                row0.createCell(8).setCellValue("当前等权PB百分位= "+((ArrayList<Object>) (entry.getValue())).get(3).toString());
             }
 
             if(!entry.getKey().equals("PE百分位")){

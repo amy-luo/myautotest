@@ -65,7 +65,7 @@ public class PE_PB_Time {
         }
         return pe_avg_map;
     }
-    public Map<String, ArrayList<Double>> calculatePePbAvg(ArrayList<String> symbols) {
+    public Map<String, ArrayList<BigDecimal>> calculatePePbAvg(ArrayList<String> symbols) {
         ArrayList<Map<String, Map<String, Object>>> allDataList = new ArrayList<Map<String, Map<String, Object>>>();
         for (String symbol : symbols) {
 //        String symbol = "SH000905";
@@ -83,124 +83,119 @@ public class PE_PB_Time {
         dates.addAll(allDataList.get(0).keySet());
 
         //计算PE/PB的算术平均值和加权平均值,与日期的对应关系
-        Map<String, ArrayList<Double>> dateMap=new HashMap<>();
-        Map<String,BigDecimal> peMap=new HashMap<>();
-        Map<String,BigDecimal> pbMap=new HashMap<>();
-        BigDecimal total_guben=new BigDecimal(0);
-        String pe_baifen="";
-        String jiaquan_avg_pe="";
-        BigDecimal total_jiaquan_pe=new BigDecimal(0);
-        String pb_baifen="";
-        String jiaquan_avg_pb="";
-        BigDecimal total_jiaquan_pb=new BigDecimal(0);
+        Map<String, ArrayList<BigDecimal>> dateMap=new HashMap<>();
+
+        ArrayList<BigDecimal> peList_dengquan = new ArrayList<>();//所有日期的指数等权平均pe
+        ArrayList<BigDecimal> peList_jiaquan = new ArrayList<>();//所有日期的指数加权平均pe
+        ArrayList<BigDecimal> pbList_dengquan = new ArrayList<>();//所有日期的指数加权平均pb
+        ArrayList<BigDecimal> pbList_jiaquan = new ArrayList<>();//所有日期的指数加权平均pb
+        //遍历一个股票的所有指标，针对某一个股票的键值对，key是date，针对某一天
         for (Object date : dates) {
-            int count=allDataList.size();
-            double total_pe=0.0;
-            double avg_pe=0.0;
-            double total_pb=0.0;
-            double avg_pb=0.0;
 
-            BigDecimal pe=new BigDecimal(0);
-            BigDecimal pb=new BigDecimal(0);
-            BigDecimal close=new BigDecimal(0);
-            BigDecimal market_capital=new BigDecimal(0);
-            for (Map<String, Map<String, Object>> submap:allDataList) {
-                //找出单个的pe/pb/market_capital
-                if(null == submap.get(date.toString())){count=count-1;}
+            BigDecimal market_capital_sum=new BigDecimal(0);//总市值（总股本）之和
+            BigDecimal close_sum=new BigDecimal(0);//个股总价之和
+            BigDecimal jingLiRun_sum=new BigDecimal(0);//每股净利润之和，每股净利润=（每股价格close）/（市盈率pe）
+            BigDecimal jingLiRun_guben_sum=new BigDecimal(0);//净利润*股本和
+            BigDecimal jingZiChan_sum=new BigDecimal(0);//每股净资产之和，每股净资产=（每股价格close）/（市净率pb）
+            BigDecimal jingZiChan_guben_sum=new BigDecimal(0);//净资产*股本和
+            int amount = allDataList.size();
+            //遍历所有的股票，对某一个股票的某一天
+            for (Map<String, Map<String, Object>> submap : allDataList) {
+                BigDecimal pe = new BigDecimal(0);
+                BigDecimal pb = new BigDecimal(0);
+                BigDecimal close = new BigDecimal(0);
+                BigDecimal market_capital = new BigDecimal(0);
+                if (null == submap.get(date.toString())) {
+                    amount = amount - 1;
+                }
                 if (null != submap.get(date.toString())) {
-                    for (Map.Entry entry : (submap.get(date.toString())).entrySet()) {
-                        String sk=String.valueOf(entry.getKey());
-                        String sv=String.valueOf(entry.getValue());
-                        if (entry.getKey().toString().equals("pe")) {
-                            if (null != entry.getValue()) {
-                                pe = (BigDecimal)entry.getValue();
-//                                logger.info(pe.toString());
-                                peMap.put(date.toString(),pe);
-                                total_pe += Double.parseDouble(pe.toString());
-                            }
-                        }
-                        if (entry.getKey().toString().equals("pb")) {
-                            if (null != entry.getValue()) {
-                                pb = (BigDecimal)entry.getValue();
-//                                logger.info(pb.toString());
-                                pbMap.put(date.toString(),pb);
-                                total_pb += Double.parseDouble(pb.toString());
-                            }
-                        }
-                        if (entry.getKey().toString().equals("close")) {
-                            if (null != entry.getValue()) {
-                                close = (BigDecimal)entry.getValue();
-//                                logger.info(pb.toString());
-                            }
-                        }
-                        if (entry.getKey().toString().equals("market_capital")) {
-                            if (null != entry.getValue()) {
-                                market_capital = (BigDecimal)entry.getValue();
-//                                logger.info(market_capital.toString());
-
-                            }
-                        }
+                    //找出单个股票的的pe/pb/market_capital/close
+                    if (null != submap.get(date.toString()).get("close")) {
+                        close = (BigDecimal) submap.get(date.toString()).get("close");
+                        close_sum=close_sum.add(close);
                     }
-                    BigDecimal guben=market_capital.divide(close, 6, BigDecimal.ROUND_HALF_UP);
-                    total_guben=total_guben.add(guben);
-                    if(null!=pe&&null!=guben){
-                        total_jiaquan_pe=total_jiaquan_pe.add(pe.multiply(guben));
-//                    logger.info(total_jiaquan_pe.toString());
+                    if (null != submap.get(date.toString()).get("pe")) {
+                        pe = (BigDecimal) submap.get(date.toString()).get("pe");
                     }
-                    if(null!=pb&&null!=market_capital) {
-                        total_jiaquan_pb=total_jiaquan_pb.add(pb.multiply(guben));
-//                    logger.info(total_jiaquan_pb.toString());
+                    if (null != submap.get(date.toString()).get("pb")) {
+                        pb = (BigDecimal) submap.get(date.toString()).get("pb");
+                    }
+                    if (null != submap.get(date.toString()).get("market_capital")) {
+                        market_capital = (BigDecimal) submap.get(date.toString()).get("market_capital");
+                        market_capital_sum=market_capital_sum.add(market_capital);
+                    }
+                    if(!(pe.toString().equals("0"))&&!(pb.toString().equals("0"))&&!(close.toString().equals("0"))) {
+                        BigDecimal zongGuBen = market_capital.divide(close, 6, BigDecimal.ROUND_HALF_UP);
+                        BigDecimal jingLiRun = close.divide(pe, 6, BigDecimal.ROUND_HALF_UP);//每股净利润之和，每股净利润=（每股价格close）/（市盈率pe）
+                        BigDecimal jingLiRun_guben = jingLiRun.multiply(zongGuBen);//净利润*股本和
+                        BigDecimal jingZiChan = close.divide(pb, 6, BigDecimal.ROUND_HALF_UP);//每股净资产之和，每股净资产=（每股价格close）/（市净率pb）
+                        BigDecimal jingZiChan_guben = jingZiChan.multiply(zongGuBen);//净资产*股本和
+                        jingLiRun_sum = jingLiRun_sum.add(jingLiRun);
+                        jingLiRun_guben_sum = jingLiRun_guben_sum.add(jingLiRun_guben);
+                        jingZiChan_sum = jingZiChan_sum.add(jingZiChan);
+                        jingZiChan_guben_sum = jingZiChan_guben_sum.add(jingZiChan_guben);
                     }
                 }
             }
-            avg_pe=total_pe/count;
-            if(null!=total_jiaquan_pe&&null!=total_guben) {
-                jiaquan_avg_pe = String.valueOf((total_jiaquan_pe.divide(total_guben, 6, BigDecimal.ROUND_HALF_UP).toString()));
-//                logger.info(jiaquan_avg_pe);
-            }
+            BigDecimal avg_pe=close_sum.divide(jingLiRun_sum,6,BigDecimal.ROUND_HALF_UP); //等权pe平均值,总价格/总利润
+            BigDecimal avg_pb=close_sum.divide(jingZiChan_sum,6,BigDecimal.ROUND_HALF_UP); //等权pb平均值，总价格/总净资产
+            BigDecimal jiaquan_avg_pe=market_capital_sum.divide(jingLiRun_guben_sum,6,BigDecimal.ROUND_HALF_UP); //加权pe平均值,（总市值之和）/（（净利润*总股本）之和）
+            BigDecimal jiaquan_avg_pb=market_capital_sum.divide(jingZiChan_guben_sum,6,BigDecimal.ROUND_HALF_UP); ; //加权pb平均值，（总市值之和）/（（净资产*总股本）之和）
 
-            avg_pb=total_pb/count;
-            if(null!=total_jiaquan_pb&&null!=total_guben) {
-                jiaquan_avg_pb = String.valueOf((total_jiaquan_pb.divide(total_guben, 6, BigDecimal.ROUND_HALF_UP).toString()));
-//                logger.info(jiaquan_avg_pb);
-            }
-            ArrayList peAndPbAverage = new ArrayList<String>();
+            peList_dengquan.add(avg_pe);//所有日期的指数等权平均pe
+            peList_jiaquan.add(jiaquan_avg_pe);//所有日期的指数加权平均pe
+            pbList_dengquan.add(avg_pb);//所有日期的指数加权平均pb
+            pbList_jiaquan.add(jiaquan_avg_pb);//所有日期的指数加权平均pb
+
+            ArrayList<BigDecimal> peAndPbAverage = new ArrayList<>();
             peAndPbAverage.add(0,avg_pe);
             peAndPbAverage.add(1,jiaquan_avg_pe);
             peAndPbAverage.add(2,avg_pb);
             peAndPbAverage.add(3,jiaquan_avg_pb);
-            logger.info("日期为："+date+"\nPE算术平均值为："+avg_pe+"\nPE加权平均值为："+jiaquan_avg_pe+" PE百分位为："+pe_baifen+"\nPB算术平均值为："+avg_pb+"\nPB加权平均值为："+jiaquan_avg_pb+"\nPB百分位为："+pb_baifen+"\n总市值为："+total_guben
-            );
+            logger.info("日期为："+date+"\nPE算术平均值为："+avg_pe+"\nPE加权平均值为："+jiaquan_avg_pe+"\nPB算术平均值为："+avg_pb+"\nPB加权平均值为："+jiaquan_avg_pb);
             dateMap.put(date.toString(),peAndPbAverage);
-            logger.info(dateMap.toString());
         }
-        BigDecimal maxPE=Collections.max(peMap.values());
-        BigDecimal minPE=Collections.min(peMap.values());
-        BigDecimal currentPE=peMap.get(Collections.max(dates));
-        pe_baifen=(((currentPE.subtract(minPE)).multiply(new BigDecimal(100))).divide((maxPE.subtract(minPE)),6, BigDecimal.ROUND_HALF_UP)).toString();
 
-        BigDecimal maxPB=Collections.max(pbMap.values());
-        BigDecimal minPB=Collections.min(pbMap.values());
-        BigDecimal currentPB=peMap.get(Collections.max(dates));;
-        pb_baifen=(((currentPB.subtract(minPB)).multiply(new BigDecimal(100))).divide((maxPB.subtract(minPB)),6, BigDecimal.ROUND_HALF_UP)).toString();
-        ArrayList<Double> baifenwei=new ArrayList<>();
-        baifenwei.add(0,Double.parseDouble(pe_baifen));
-        baifenwei.add(1,Double.parseDouble(pb_baifen));
+        BigDecimal maxPE_dengquan=Collections.max(peList_dengquan);
+        BigDecimal minPE_dengquan=Collections.min(peList_dengquan);
+        BigDecimal maxPE_jiaquan=Collections.max(peList_jiaquan);
+        BigDecimal minPE_jiaquan=Collections.min(peList_jiaquan);
+        BigDecimal maxPB_dengquan=Collections.max(pbList_dengquan);
+        BigDecimal minPB_dengquan=Collections.min(pbList_dengquan);
+        BigDecimal maxPB_jiaquan=Collections.max(pbList_jiaquan);
+        BigDecimal minPB_jiaquan=Collections.min(pbList_jiaquan);
+
+        BigDecimal currentPE_dengquan=dateMap.get(Collections.max(dateMap.keySet())).get(0);
+        BigDecimal currentPE_jiaquan=dateMap.get(Collections.max(dateMap.keySet())).get(1);
+        BigDecimal currentPB_dengquan=dateMap.get(Collections.max(dateMap.keySet())).get(2);
+        BigDecimal currentPB_jiaquan=dateMap.get(Collections.max(dateMap.keySet())).get(3);
+
+        BigDecimal pe_baifen_dengquan=(currentPE_dengquan.subtract(minPE_dengquan)).divide(maxPE_dengquan.subtract(minPE_dengquan),6,BigDecimal.ROUND_HALF_UP); //当前等权pe百分位
+        BigDecimal pb_baifen_dengquan=(currentPB_dengquan.subtract(minPB_dengquan)).divide(maxPB_dengquan.subtract(minPB_dengquan),6,BigDecimal.ROUND_HALF_UP); //当前等权pb百分位
+        BigDecimal pe_baifen_jiaquan=(currentPE_jiaquan.subtract(minPE_jiaquan)).divide(maxPE_jiaquan.subtract(minPE_jiaquan),6,BigDecimal.ROUND_HALF_UP); //当前加权pe百分位
+        BigDecimal pb_baifen_jiaquan=(currentPB_jiaquan.subtract(minPB_jiaquan)).divide(maxPB_jiaquan.subtract(minPB_jiaquan),6,BigDecimal.ROUND_HALF_UP); //当前加权pb百分位
+
+        ArrayList<BigDecimal> baifenwei=new ArrayList<>();
+        baifenwei.add(0,pe_baifen_dengquan);
+        baifenwei.add(1,pe_baifen_jiaquan);
+        baifenwei.add(2,pb_baifen_dengquan);
+        baifenwei.add(3,pb_baifen_jiaquan);
         dateMap.put("PE百分位",baifenwei);
         return dateMap;
     }
 
     public static void main(String[] args) throws IOException {
         PE_PB_Time pe_pb_time=new PE_PB_Time();
-        String filePath="D:\\通达信\\T0002\\export\\上证5020200730.XLSX";
-        String filePathForWrite="D:\\通达信\\T0002\\export\\上证50统计.XLSX";
+//        String filePath="D:\\通达信\\T0002\\export\\上证5020200730.XLSX";
+//        String filePathForWrite="D:\\通达信\\T0002\\export\\上证50统计.XLSX";
 //        String filePath="D:\\通达信\\T0002\\export\\中证50020200730.XLSX";
+//        String filePathForWrite="D:\\通达信\\T0002\\export\\中证500统计.XLSX";
+        String filePath="D:\\通达信\\T0002\\export\\沪深30020200730.XLSX";
+        String filePathForWrite="D:\\通达信\\T0002\\export\\沪深300统计.XLSX";
         GetZhongZheng500Codes getZhongZheng500Codes=new GetZhongZheng500Codes();
         ArrayList<String> symbols=getZhongZheng500Codes.codesForZhongZheng500(filePath);
-        logger.info(symbols.toString());
-        Map<String, ArrayList<Double>> dateMap=pe_pb_time.calculatePePbAvg(symbols);
+        Map<String, ArrayList<BigDecimal>> dateMap=pe_pb_time.calculatePePbAvg(symbols);
         PoiWriteUtil poiWriteUtil=new PoiWriteUtil();
         poiWriteUtil.poiWrite(filePathForWrite,dateMap);
     }
 }
-

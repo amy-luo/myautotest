@@ -48,9 +48,7 @@ public class SearchCode {
             String responseBody = response.body().string();
             JSONObject jsonResult = JSON.parseObject(responseBody);
             String codeWithHead = JSON.parseObject(jsonResult.getJSONArray("stocks").get(0).toString()).getString("code");
-            logger.info(codeWithHead);
             codeWithHeads.add(codeWithHead);
-            logger.info(codeWithHeads.toString());
         }
         return codeWithHeads;
     }
