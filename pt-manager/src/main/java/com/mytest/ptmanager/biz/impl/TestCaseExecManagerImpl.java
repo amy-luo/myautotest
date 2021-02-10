@@ -1,26 +1,36 @@
 package com.mytest.ptmanager.biz.impl;
 
 import com.mytest.ptmanager.biz.TestCaseExecManager;
+import com.mytest.ptmanager.model.dto.LoadTestDTO;
+import org.springframework.stereotype.Service;
 
 //TODO 接入spring
+@Service
 public class TestCaseExecManagerImpl implements TestCaseExecManager {
 
     @Override
-    public void modifyQps(Integer threadCount,Integer cyclesCount) {
+    public LoadTestDTO modifyQps(Integer threadCount, Integer cyclesCount) {
+        LoadTestDTO dto=new LoadTestDTO();
+        return dto;
+    }
+
+    @Override
+    public LoadTestDTO startLoadTest(String tcId,Integer threadCount,Integer cyclesCount) {
+        LoadTestDTO dto=new LoadTestDTO();
+        return dto;
 
     }
 
     @Override
-    public void startLoadTest(String tcId,Integer threadCount,Integer cyclesCount) {
-
-    }
-
-    @Override
-    public void stopLoadTest(String tcId) {
+    public LoadTestDTO stopLoadTest(String tcId) {
+        LoadTestDTO dto=new LoadTestDTO();
+        return dto;
 
     }
     @Override
-    public void queryStatus(String tcId){
+    public LoadTestDTO queryStatus(String tcId){
+        LoadTestDTO dto=new LoadTestDTO();
+        return dto;
 
     };
 }

@@ -1,6 +1,8 @@
 package com.mytest.ptmanager.api;
 
+import com.mytest.ptmanager.biz.impl.TestCaseExecManagerImpl;
 import com.mytest.ptmanager.model.dto.LoadTestDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,13 +15,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //@RestController
 @ResponseBody
 public class TestCaseExecController {
+
+    @Autowired
+    private TestCaseExecManagerImpl manager;
+
     @ResponseBody
     @RequestMapping(value="/modifyQps",method= RequestMethod.POST)
     public LoadTestDTO modifyQps(@RequestParam("threadCount")Integer threadCount,
                                  @RequestParam("cyclesCount")Integer cyclesCount){
 
-
-          return null;
+        LoadTestDTO dto=manager.modifyQps(threadCount,cyclesCount);
+        return dto;
     }
     @ResponseBody
     @RequestMapping(value="/startLoadTest",method= RequestMethod.POST)
@@ -27,23 +33,21 @@ public class TestCaseExecController {
                                      @RequestParam("threadCount")Integer threadCount,
                                      @RequestParam("cyclesCount")Integer cyclesCount){
 
-
-        return null;
+        LoadTestDTO dto=manager.startLoadTest(tcId,threadCount,cyclesCount);
+        return dto;
     }
 
     @ResponseBody
     @RequestMapping(value="/stopLoadTest",method= RequestMethod.POST)
     public LoadTestDTO stopLoadTest(@RequestParam("tcId")String tcId){
-
-
-        return null;
+        LoadTestDTO dto=manager.stopLoadTest(tcId);
+        return dto;
     }
 
     @ResponseBody
     @RequestMapping(value="/queryStatus",method= RequestMethod.POST)
     public LoadTestDTO queryStatus(@RequestParam("tcId")String tcId){
-
-
-        return null;
+        LoadTestDTO dto=manager.queryStatus(tcId);
+        return dto;
     }
 }
