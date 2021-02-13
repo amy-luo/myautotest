@@ -1,13 +1,8 @@
 package com.mytest.ptworker.client.model.request;
 
-import org.springframework.stereotype.Component;
+import com.mytest.ptworker.client.model.dto.ModifyQpsResponse;
 
-import java.io.Serializable;
-
-//定义了rpc服务的请求参数结构
-@Component
-public class TcStartRequest implements Serializable {
-
+public class ModifyQpsRequest {
     private String tcId;
     private Integer threadCount;
     private Integer cyclesCount;
@@ -35,6 +30,4 @@ public class TcStartRequest implements Serializable {
     public void setCyclesCount(Integer cyclesCount) {
         this.cyclesCount = cyclesCount;
     }
-
-
 }

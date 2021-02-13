@@ -8,9 +8,6 @@ import org.springframework.context.annotation.PropertySource;
  */
 
 @SpringBootApplication
-public class PtWorkerApplication
-{
-    public static void main( String[] args ) {
-
-    }
+public class PtWorkerApplication {
+    public static void main( String[] args ) {}
 }
