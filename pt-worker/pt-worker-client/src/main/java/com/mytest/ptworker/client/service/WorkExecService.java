@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-//Service服务定义
-@Service
+
 public interface WorkExecService {
     public ModifyQpsResponse modifyQps(ModifyQpsRequest request);
     public QueryStatusResponse queryStatus(QueryStatusRequest request);

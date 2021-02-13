@@ -7,6 +7,6 @@
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!-- 声明消费的服务 -->
 <!--    <dubbo:reference interface="me.lance.testService"  id="testService" />-->
-    <dubbo:reference interface="com.mytest.ptworker.client.service.WorkerQueryService" id="WorkerQueryServiceImpl" />
-    <dubbo:reference interface="com.mytest.ptworker.client.service.WorkExecService" id="WorkExecServiceImpl" />
+    <dubbo:reference interface="com.mytest.ptworker.client.service.WorkerQueryService" id="workerQueryService" />
+    <dubbo:reference interface="com.mytest.ptworker.client.service.WorkExecService" id="workExecService" />
 </beans>

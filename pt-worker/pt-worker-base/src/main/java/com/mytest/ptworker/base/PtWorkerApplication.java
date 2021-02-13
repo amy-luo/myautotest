@@ -6,8 +6,8 @@ import org.springframework.context.annotation.PropertySource;
  * Hello world!
  *
  */
-
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.mytest.ptworker.base")
+@PropertySource(value="dubbo.properties")
 public class PtWorkerApplication {
     public static void main( String[] args ) {}
 }

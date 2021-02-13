@@ -10,9 +10,11 @@ import com.mytest.ptworker.client.model.request.TcStartRequest;
 import com.mytest.ptworker.client.model.request.TcStopRequest;
 import com.mytest.ptworker.client.service.WorkExecService;
 import com.sun.tracing.dtrace.ProviderAttributes;
+import org.springframework.stereotype.Service;
 
 //服务层的服务实现
 //TODO 接入RPC框架的provider注解
+@Service
 public class WorkerExecServiceImpl implements WorkExecService {
     @Override
     public ModifyQpsResponse modifyQps(ModifyQpsRequest request) {
