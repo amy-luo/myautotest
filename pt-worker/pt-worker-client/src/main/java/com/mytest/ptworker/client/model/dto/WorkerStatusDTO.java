@@ -1,10 +1,7 @@
 package com.mytest.ptworker.client.model.dto;
 
-import org.springframework.stereotype.Component;
-
 import java.io.Serializable;
 
-@Component
 public class WorkerStatusDTO implements Serializable {
 
     private String workerId;
