@@ -10,16 +10,12 @@ import java.net.UnknownHostException;
 @Service
 public class QueryStatus {
     public QueryStatusResponse queryStatus(QueryStatusRequest request){
-        InetAddress ia=null;
         QueryStatusResponse response=new QueryStatusResponse();
         try {
-            ia=ia.getLocalHost();
-//            String localname=ia.getHostName();
-            String localip=ia.getHostAddress();
+            String localip=InetAddress.getLocalHost().getHostAddress();
             response.setSuccess(true);
             response.setIpOfWorker(localip);
             response.setStatus(ParasForTest.status);
-//            System.out.println("本机名称是："+ localname);
             System.out.println("本机的ip是 ："+localip);
         } catch (UnknownHostException e) {
             e.printStackTrace();
