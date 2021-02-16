@@ -24,7 +24,7 @@ public class TcStop {
         try {
             ia=ia.getLocalHost();
 //            String localname=ia.getHostName();
-            String localip=ia.getHostAddress();
+            String localip=InetAddress.getLocalHost().getHostAddress();
             response.setIpOfWorker(localip);
 //            System.out.println("本机名称是："+ localname);
             System.out.println("本机的ip是 ："+localip);

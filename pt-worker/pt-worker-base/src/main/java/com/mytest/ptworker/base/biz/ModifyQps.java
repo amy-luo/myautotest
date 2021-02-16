@@ -34,15 +34,14 @@ public class ModifyQps {
         } catch (InterruptedException e) {
             e.printStackTrace();
             response.setSuccess(false);
+            response.setErrorMessage("修改失败");
         }
         response.setSuccess(true);
         response.setStatus(ParasForTest.status);
         //查找本地ip；
-        InetAddress ia=null;
         try {
-            ia=ia.getLocalHost();
 //            String localname=ia.getHostName();
-            String localip=ia.getHostAddress();
+            String localip= InetAddress.getLocalHost().getHostAddress();
             response.setIpOfWorker(localip);
 //            System.out.println("本机名称是："+ localname);
             System.out.println("本机的ip是 ："+localip);

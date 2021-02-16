@@ -33,15 +33,14 @@ public class TcStart {
         } catch (InterruptedException e) {
             e.printStackTrace();
             response.setSuccess(false);
+            response.setErrorMessage("开启压测失败");
         }
         response.setSuccess(true);
         response.setStatus(ParasForTest.status);
         //查找本地ip；
-        InetAddress ia=null;
         try {
-            ia=ia.getLocalHost();
 //            String localname=ia.getHostName();
-            String localip=ia.getHostAddress();
+            String localip=InetAddress.getLocalHost().getHostAddress();
             response.setIpOfWorker(localip);
 //            System.out.println("本机名称是："+ localname);
             System.out.println("本机的ip是 ："+localip);
