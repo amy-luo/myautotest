@@ -62,9 +62,8 @@ public class TestCaseExecManagerImpl implements TestCaseExecManager {
     }
 
     @Override
-    public LoadTestDTO stopLoadTest(String tcId) {
+    public LoadTestDTO stopLoadTest() {
         TcStopRequest request=new TcStopRequest();
-        request.setTcId("");
         TcStopResponse response =workerExecService.tcStop(request);
         LoadTestDTO dto=new LoadTestDTO();
         dto.setSuccess(response.isSuccess());

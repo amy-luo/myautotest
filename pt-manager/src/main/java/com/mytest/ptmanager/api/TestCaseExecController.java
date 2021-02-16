@@ -35,14 +35,14 @@ public class TestCaseExecController {
     }
 
     @ResponseBody
-    @RequestMapping(value="/stopLoadTest",method= RequestMethod.POST)
-    public LoadTestDTO stopLoadTest(@RequestParam("tcId")String tcId){
-        LoadTestDTO dto=manager.stopLoadTest(tcId);
+    @RequestMapping(value="/stopLoadTest",method= RequestMethod.GET)
+    public LoadTestDTO stopLoadTest(){
+        LoadTestDTO dto=manager.stopLoadTest();
         return dto;
     }
 
     @ResponseBody
-    @RequestMapping(value="/queryStatus",method= RequestMethod.POST)
+    @RequestMapping(value="/queryStatus",method= RequestMethod.GET)
     public LoadTestDTO queryStatus(){
         LoadTestDTO dto=manager.queryStatus();
         return dto;

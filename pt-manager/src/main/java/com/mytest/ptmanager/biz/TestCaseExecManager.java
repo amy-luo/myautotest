@@ -9,7 +9,7 @@ public interface TestCaseExecManager {
 
     public LoadTestDTO startLoadTest(String tcId,Integer threadCount,Integer cyclesCount);
 
-    public LoadTestDTO stopLoadTest(String tcId);
+    public LoadTestDTO stopLoadTest();
 
     public LoadTestDTO queryStatus();
 }
