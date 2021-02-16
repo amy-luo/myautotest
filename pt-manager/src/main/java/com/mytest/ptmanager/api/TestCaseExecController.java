@@ -18,10 +18,10 @@ public class TestCaseExecController {
 
     @ResponseBody
     @RequestMapping(value="/modifyQps",method= RequestMethod.POST)
-    public LoadTestDTO modifyQps(@RequestParam("threadCount")Integer threadCount,
+    public LoadTestDTO modifyQps(@RequestParam("tcId")String tcId,@RequestParam("threadCount")Integer threadCount,
                                  @RequestParam("cyclesCount")Integer cyclesCount){
 
-        LoadTestDTO dto=manager.modifyQps(threadCount,cyclesCount);
+        LoadTestDTO dto=manager.modifyQps(tcId,threadCount,cyclesCount);
         return dto;
     }
     @ResponseBody
@@ -43,8 +43,8 @@ public class TestCaseExecController {
 
     @ResponseBody
     @RequestMapping(value="/queryStatus",method= RequestMethod.POST)
-    public LoadTestDTO queryStatus(@RequestParam("tcId")String tcId){
-        LoadTestDTO dto=manager.queryStatus(tcId);
+    public LoadTestDTO queryStatus(){
+        LoadTestDTO dto=manager.queryStatus();
         return dto;
     }
 }

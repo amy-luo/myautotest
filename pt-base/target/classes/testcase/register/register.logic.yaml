@@ -1,8 +1,0 @@
-- !!com.mytest.function.Utils.TestLogic
-  logicId: USER_REGISTER
-  description: SKY正常注册
-  ccils:
-    - CheckRegisteredUserAndSendOTPTest
-    - SecurityVerifyOtpTest
-    - SecurityGetPublickeyTest
-    - SkyRegisterRegisterTest

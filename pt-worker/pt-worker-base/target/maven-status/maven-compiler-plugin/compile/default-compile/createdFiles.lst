@@ -1,8 +1,0 @@
-com\mytest\ptworker\base\service\impl\WorkerExecServiceImpl.class
-com\mytest\ptworker\base\biz\ModifyQps.class
-com\mytest\ptworker\base\biz\QueryStatus.class
-com\mytest\ptworker\base\biz\QueryWorkStatus.class
-com\mytest\ptworker\base\biz\TcStart.class
-com\mytest\ptworker\base\biz\TcStop.class
-com\mytest\ptworker\base\PtWorkerApplication.class
-com\mytest\ptworker\base\service\impl\WorkerQueryServiceImpl.class

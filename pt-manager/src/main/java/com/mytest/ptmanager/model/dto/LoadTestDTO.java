@@ -18,7 +18,7 @@ public class LoadTestDTO {
         return tcId;
     }
 
-    public void setTcId(Integer tcId) {
+    public void setTcId(String tcId) {
         this.tcId = tcId;
     }
 
