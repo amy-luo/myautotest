@@ -15,6 +15,17 @@ public class ModifyQps {
     @Autowired
     LoadTestNew loadTestNew;
     public ModifyQpsResponse modifyQps(ModifyQpsRequest request){
+
+        /**将压测状态恢复到初始值，以准备下次的压测*/
+        LoadTestNew.count = 0;
+        LoadTestNew.startCount = 0;
+        LoadTestNew.requestCount = 0;
+        LoadTestNew.errorCount = 0;
+        LoadTestNew.errorPercent = 0;
+        LoadTestNew.poolCount=0;
+        LoadTestNew.resultList.clear();
+
+        /**设置压测入参*/
         ParasForTest.status=true;
         String tcId="";
         if(request.getTcId()!=null) {
