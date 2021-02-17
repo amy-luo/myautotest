@@ -5,7 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class ParasForTest {
 //    public static String tcId="";
-//    public static Integer cyclesCount=0;
-//    public static Integer threadCount=0;
-    public static boolean status;
+    public static Integer cyclesCount=0;
+    public static Integer threadCount=0;
+    public static boolean status=true;
+
+    /**在开启压测或更改压测时，将从zk中同步过来的时间加上3s；*/
+    public static long st=0L;
 }

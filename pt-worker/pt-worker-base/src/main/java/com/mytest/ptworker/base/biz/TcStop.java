@@ -15,11 +15,13 @@ public class TcStop {
     @Autowired
     LoadTest loadTest;
     public TcStopResponse tcStop(TcStopRequest request){
+        /**将参数状态改为false，线程将当前正在执行的任务完成后停止压测，不再循环取拿取任务*/
         ParasForTest.status=false;
         TcStopResponse response=new TcStopResponse();
         response.setSuccess(true);
         response.setStatus(ParasForTest.status);
-        //查找本地ip；
+
+        /**查找本地ip；*/
         try {
             String localip=InetAddress.getLocalHost().getHostAddress();
             response.setIpOfWorker(localip);

@@ -55,7 +55,6 @@ public class LoadTest extends Thread{
             double errorPercent = ReportPacketTest.error / cyclesCount;
             ReportMessage reportMessage = new ReportMessage();
             reportMessage.setSt(st);
-            reportMessage.setEt(et);
             reportMessage.setQps(qps);
             reportMessage.setRt(rt);
             reportMessage.setCyclesCount(cyclesCount);

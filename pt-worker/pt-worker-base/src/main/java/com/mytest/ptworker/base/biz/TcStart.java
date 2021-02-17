@@ -12,24 +12,25 @@ import java.net.UnknownHostException;
 @Service
 public class TcStart {
     @Autowired
-    LoadTest loadTest;
+    LoadTestNew loadTestNew;
     public TcStartResponse tcStart(TcStartRequest request){
         ParasForTest.status=true;
         String tcId="";
-        Integer cyclesCount=0;
-        Integer threadCount=10;
         if(request.getTcId()!=null) {
             tcId=request.getTcId();
         }
         if(request.getCyclesCount()!=null) {
-            cyclesCount = request.getCyclesCount();
+            ParasForTest.cyclesCount = request.getCyclesCount();
         }
         if(request.getThreadCount()!=null) {
-            threadCount=request.getThreadCount();
+            ParasForTest.threadCount=request.getThreadCount();
         }
         TcStartResponse response=new TcStartResponse();
+        /**开启定时器，每秒，向池子里放置任务数，以及定时计算qps，rt，错误率，发送至MQ*/
+        Thread t=new Thread(new Schechule());
+        t.start();
         try {
-            loadTest.runLoadTest(cyclesCount,threadCount,tcId);
+            loadTestNew.runLoadTest(tcId);
         } catch (InterruptedException e) {
             e.printStackTrace();
             response.setSuccess(false);

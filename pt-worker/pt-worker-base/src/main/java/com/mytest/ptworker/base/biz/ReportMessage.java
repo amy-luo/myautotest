@@ -2,7 +2,6 @@ package com.mytest.ptworker.base.biz;
 
 public class ReportMessage {
     private Long st;
-    private Long et;
     private double qps;
     private double rt;
     private Integer cyclesCount;
@@ -15,14 +14,6 @@ public class ReportMessage {
 
     public void setSt(Long st) {
         this.st = st;
-    }
-
-    public Long getEt() {
-        return et;
-    }
-
-    public void setEt(Long et) {
-        this.et = et;
     }
 
     public double getQps() {
