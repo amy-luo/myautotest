@@ -18,33 +18,33 @@ public class TestCaseExecController {
 
     @ResponseBody
     @RequestMapping(value="/modifyQps",method= RequestMethod.POST)
-    public LoadTestDTO modifyQps(@RequestParam("tcId")String tcId,@RequestParam("threadCount")Integer threadCount,
+    public LoadTestDTO modifyQps(@RequestParam String methodType,@RequestParam("tcId")String tcId,@RequestParam("threadCount")Integer threadCount,
                                  @RequestParam("cyclesCount")Integer cyclesCount){
 
-        LoadTestDTO dto=manager.modifyQps(tcId,threadCount,cyclesCount);
+        LoadTestDTO dto=manager.modifyQps(methodType,tcId,threadCount,cyclesCount);
         return dto;
     }
     @ResponseBody
     @RequestMapping(value="/startLoadTest",method= RequestMethod.POST)
-    public LoadTestDTO startLoadTest(@RequestParam("tcId")String tcId,
+    public LoadTestDTO startLoadTest(@RequestParam String methodType,@RequestParam("tcId")String tcId,
                                      @RequestParam("threadCount")Integer threadCount,
                                      @RequestParam("cyclesCount")Integer cyclesCount){
 
-        LoadTestDTO dto=manager.startLoadTest(tcId,threadCount,cyclesCount);
+        LoadTestDTO dto=manager.startLoadTest(methodType,tcId,threadCount,cyclesCount);
         return dto;
     }
 
     @ResponseBody
-    @RequestMapping(value="/stopLoadTest",method= RequestMethod.GET)
-    public LoadTestDTO stopLoadTest(){
-        LoadTestDTO dto=manager.stopLoadTest();
+    @RequestMapping(value="/stopLoadTest",method= RequestMethod.POST)
+    public LoadTestDTO stopLoadTest(@RequestParam String methodType){
+        LoadTestDTO dto=manager.stopLoadTest(methodType);
         return dto;
     }
 
     @ResponseBody
-    @RequestMapping(value="/queryStatus",method= RequestMethod.GET)
-    public LoadTestDTO queryStatus(){
-        LoadTestDTO dto=manager.queryStatus();
+    @RequestMapping(value="/queryStatus",method= RequestMethod.POST)
+    public LoadTestDTO queryStatus(@RequestParam String methodType){
+        LoadTestDTO dto=manager.queryStatus(methodType);
         return dto;
     }
 }

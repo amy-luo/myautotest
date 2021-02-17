@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 
 @Service
 public class QueryStatus {
-    public QueryStatusResponse queryStatus(QueryStatusRequest request){
+    public QueryStatusResponse queryStatus(){
         QueryStatusResponse response=new QueryStatusResponse();
         try {
             String localip=InetAddress.getLocalHost().getHostAddress();

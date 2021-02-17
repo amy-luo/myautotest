@@ -1,4 +1,4 @@
-package com.mytest.ptmanager.util;
+package com.mytest.ptmanager.configure;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

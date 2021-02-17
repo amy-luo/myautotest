@@ -14,7 +14,7 @@ import java.net.UnknownHostException;
 public class TcStop {
     @Autowired
     LoadTest loadTest;
-    public TcStopResponse tcStop(TcStopRequest request){
+    public TcStopResponse tcStop(){
         /**将参数状态改为false，线程将当前正在执行的任务完成后停止压测，不再循环取拿取任务*/
         ParasForTest.status=false;
         /**将压测状态恢复到初始值，以准备下次的压测*/

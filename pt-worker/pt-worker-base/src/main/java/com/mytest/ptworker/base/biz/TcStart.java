@@ -13,8 +13,7 @@ import java.net.UnknownHostException;
 public class TcStart {
     @Autowired
     LoadTestNew loadTestNew;
-    public TcStartResponse tcStart(TcStartRequest request){
-
+    public TcStartResponse tcStart(String tcId,Integer cyclesCount, Integer threadCount){
         /**将压测状态恢复到初始值，以准备下次的压测*/
         LoadTestNew.count = 0;
         LoadTestNew.startCount = 0;
@@ -29,16 +28,8 @@ public class TcStart {
 
         /**设置压测入参*/
         ParasForTest.status=true;
-        String tcId="";
-        if(request.getTcId()!=null) {
-            tcId=request.getTcId();
-        }
-        if(request.getCyclesCount()!=null) {
-            ParasForTest.cyclesCount = request.getCyclesCount();
-        }
-        if(request.getThreadCount()!=null) {
-            ParasForTest.threadCount=request.getThreadCount();
-        }
+        ParasForTest.cyclesCount = cyclesCount;
+        ParasForTest.threadCount=threadCount;
         TcStartResponse response=new TcStartResponse();
         /**开启定时器，每秒，向池子里放置任务数，以及定时计算qps，rt，错误率，发送至MQ*/
         Thread t=new Thread(new Schechule());

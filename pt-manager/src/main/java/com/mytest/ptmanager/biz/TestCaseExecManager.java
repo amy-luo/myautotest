@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 public interface TestCaseExecManager {
 
-    public LoadTestDTO modifyQps(String tcId,Integer threadCount, Integer cyclesCount);
+    public LoadTestDTO modifyQps(String methodType,String tcId,Integer threadCount, Integer cyclesCount);
 
-    public LoadTestDTO startLoadTest(String tcId,Integer threadCount,Integer cyclesCount);
+    public LoadTestDTO startLoadTest(String methodType,String tcId,Integer threadCount,Integer cyclesCount);
 
-    public LoadTestDTO stopLoadTest();
+    public LoadTestDTO stopLoadTest(String methodType);
 
-    public LoadTestDTO queryStatus();
+    public LoadTestDTO queryStatus(String methodType);
 }
