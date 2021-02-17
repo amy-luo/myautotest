@@ -34,7 +34,7 @@ public class Schechule implements Runnable {
                     double rt = LoadTestNew.resultList.stream().mapToLong(o -> o).average().orElse(0) / 1000;
 
                     /**清空上一秒存储的rt；*/
-                    LoadTestNew.resultList.removeAll(LoadTestNew.resultList);
+                    LoadTestNew.resultList.clear();
 
                     /**计算错误率*/
                     LoadTestNew.errorPercent=LoadTestNew.errorCount/(LoadTestNew.requestCount+LoadTestNew.errorCount);
