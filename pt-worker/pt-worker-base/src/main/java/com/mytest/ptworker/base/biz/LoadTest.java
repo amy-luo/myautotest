@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
-
+/**过时的压测代码，报废*/
 @Component
 public class LoadTest extends Thread{
     @Autowired

@@ -9,7 +9,10 @@ import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**根据入参cyclesCount，即预设QPS，每秒释放出预设QPS这么大的请求数量，实际执行出来的QPS会与预设QPS有差异。
+ * 只要压测开启状态为true，池子里还有请求数量，就循环执行压测，
+ * 若池子里请求数量为空，则等待，直到当下一秒当定时器往池子里释放新的请求数量
+ * 定时器计算的是实际每一秒的QPS，会与预设QPS有所出入，可手动调整预设QPS值*/
 @Component
 public class LoadTestNew extends Thread {
     public static int count = 0;

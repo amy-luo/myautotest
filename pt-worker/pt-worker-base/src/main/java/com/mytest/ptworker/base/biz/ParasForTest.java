@@ -1,7 +1,7 @@
 package com.mytest.ptworker.base.biz;
 
 import org.springframework.stereotype.Component;
-
+/**每台Worker的入参，从zk同步过来之后，修改该类的参数*/
 @Component
 public class ParasForTest {
 //    public static String tcId="";
