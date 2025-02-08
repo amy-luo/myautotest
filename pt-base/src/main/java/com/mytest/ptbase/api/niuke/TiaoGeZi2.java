@@ -13,19 +13,19 @@ public class TiaoGeZi2 {
             if (m == 1) {
                 count = 1;
             }
-            ArrayList<Integer> list = new ArrayList<>();
-            for (int i = 0; i < m; i++) {
+            ArrayList<Integer> list = new ArrayList<>();//存放不同跳法的得分
+            for (int i = 0; i < m; i++) {//从第几个开始跳
                 int sum = 0;
-                for (int j = 0; j < count; j++) {
-                    int index = i + 2 * j;
-                    if (index >= m) {
+                for (int j = 0; j < count; j++) {//跳多少次
+                    int index = i + 2 * j;//每次跳到的索引，知道初始索引位置
+                    if (index >= m) {//如果索引超出数组长度，就从头开始。
                         index = index - m;
                     }
                     sum += geZi[index];
                 }
                 list.add(sum);
             }
-            System.out.println(Collections.max(list));
+            System.out.println(Collections.max(list));//输出最大得分
         }
 
     }
