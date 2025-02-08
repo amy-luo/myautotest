@@ -19,7 +19,7 @@ public class LoadTestDTO {
     }
 
     public void setTcId(String tcId) {
-        this.tcId = tcId;
+        this.tcId = Integer.valueOf(tcId);
     }
 
     public boolean isSuccess() {

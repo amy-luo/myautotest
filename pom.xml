@@ -56,6 +56,11 @@
                 <artifactId>rocketmq-spring-boot-starter</artifactId>
                 <version>2.2.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>2.11.1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

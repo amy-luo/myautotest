@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/com.mytest.iml" filepath="$PROJECT_DIR$/com.mytest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pt-base/pt-base.iml" filepath="$PROJECT_DIR$/pt-base/pt-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pt-manager/pt-manager.iml" filepath="$PROJECT_DIR$/pt-manager/pt-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pt-worker/pt-worker.iml" filepath="$PROJECT_DIR$/pt-worker/pt-worker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pt-worker/pt-worker-base/pt-worker-base.iml" filepath="$PROJECT_DIR$/pt-worker/pt-worker-base/pt-worker-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pt-worker/pt-worker-client/pt-worker-client.iml" filepath="$PROJECT_DIR$/pt-worker/pt-worker-client/pt-worker-client.iml" />
     </modules>
   </component>
 </project>
