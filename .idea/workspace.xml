@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2b3f413-4e9c-446c-81bb-1f3cccc80197" name="Default" comment="push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/FreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/FreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/Huisu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/HuisuZifuChuan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/TiaoGeZi2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/TiaoGeZi2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/FreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/FreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/Huisu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/TiaoGeZi2.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/TiaoGeZi2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +123,7 @@
       <recent name="E:\Work666\my_test\src\test\java\com\mytest\function\api\xueqiu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TiaoGeZi2">
+  <component name="RunManager" selected="Application.DaYinRenWuPaiXu">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -241,8 +247,8 @@
       <listeners />
       <method />
     </configuration>
-    <configuration name="DongTaiZuiDaDuanXinTiaoShu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.DongTaiZuiDaDuanXinTiaoShu" />
+    <configuration name="BianMaNengLiTiSheng" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.BianMaNengLiTiSheng" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -255,8 +261,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeKaoXingZuiDaDongTai" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.KeKaoXingZuiDaDongTai" />
+    <configuration name="DaYinRenWuPaiXu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.DaYinRenWuPaiXu" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -269,8 +275,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShuZiJiaJianYouXi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.ShuZiJiaJianYouXi" />
+    <configuration name="MELONdeNanTi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.MELONdeNanTi" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -283,8 +289,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TiaoGeZi2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.TiaoGeZi2" />
+    <configuration name="ShuJiDieFang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.ShuJiDieFang" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -297,8 +303,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XinHaoYuan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.XinHaoYuan" />
+    <configuration name="YunShuShiJian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.niuke.YunShuShiJian" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -480,19 +486,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.XinHaoYuan" />
-      <item itemvalue="Application.DongTaiZuiDaDuanXinTiaoShu" />
-      <item itemvalue="Application.ShuZiJiaJianYouXi" />
-      <item itemvalue="Application.KeKaoXingZuiDaDongTai" />
-      <item itemvalue="Application.TiaoGeZi2" />
+      <item itemvalue="Application.BianMaNengLiTiSheng" />
+      <item itemvalue="Application.YunShuShiJian" />
+      <item itemvalue="Application.ShuJiDieFang" />
+      <item itemvalue="Application.MELONdeNanTi" />
+      <item itemvalue="Application.DaYinRenWuPaiXu" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TiaoGeZi2" />
-        <item itemvalue="Application.KeKaoXingZuiDaDongTai" />
-        <item itemvalue="Application.ShuZiJiaJianYouXi" />
-        <item itemvalue="Application.DongTaiZuiDaDuanXinTiaoShu" />
-        <item itemvalue="Application.XinHaoYuan" />
+        <item itemvalue="Application.DaYinRenWuPaiXu" />
+        <item itemvalue="Application.MELONdeNanTi" />
+        <item itemvalue="Application.ShuJiDieFang" />
+        <item itemvalue="Application.YunShuShiJian" />
+        <item itemvalue="Application.BianMaNengLiTiSheng" />
       </list>
     </recent_temporary>
   </component>
@@ -533,7 +539,7 @@
       <workItem from="1737614635207" duration="25368000" />
       <workItem from="1737800781261" duration="3418000" />
       <workItem from="1737812902285" duration="201000" />
-      <workItem from="1737815881956" duration="254460000" />
+      <workItem from="1737815881956" duration="326683000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1578071546294</created>
@@ -790,38 +796,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="270" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1737816348503" />
-    <state width="1285" height="216" key="GridCell.Tab.0.bottom" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.0.bottom" timestamp="1739169609343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.0.center" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1739169609343" />
+    <state width="1424" height="243" key="GridCell.Tab.0.center" timestamp="1739169609342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.0.left" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1739169609342" />
+    <state width="1424" height="243" key="GridCell.Tab.0.left" timestamp="1739169609342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.0.right" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1739169609342" />
+    <state width="1424" height="243" key="GridCell.Tab.0.right" timestamp="1739169609342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.1.bottom" timestamp="1739005835373">
+    <state width="1424" height="243" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1739169609342" />
+    <state width="1424" height="243" key="GridCell.Tab.1.bottom" timestamp="1739169602587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835373" />
-    <state width="1285" height="216" key="GridCell.Tab.1.center" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1739169602587" />
+    <state width="1424" height="243" key="GridCell.Tab.1.center" timestamp="1739169602587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.1.left" timestamp="1739005835372">
+    <state width="1424" height="243" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1739169602587" />
+    <state width="1424" height="243" key="GridCell.Tab.1.left" timestamp="1739169602587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835372" />
-    <state width="1285" height="216" key="GridCell.Tab.1.right" timestamp="1739005835373">
+    <state width="1424" height="243" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1739169602587" />
+    <state width="1424" height="243" key="GridCell.Tab.1.right" timestamp="1739169602587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1285" height="216" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1739005835373" />
+    <state width="1424" height="243" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1739169602587" />
     <state x="461" y="157" key="SettingsEditor" timestamp="1737812339360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -830,14 +836,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="219" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1737812665558" />
-    <state x="1164" y="252" key="run.anything.popup" timestamp="1738726428595">
+    <state x="1164" y="252" key="run.anything.popup" timestamp="1739013831353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1164" y="252" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1738726428594" />
-    <state x="617" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1738986474871">
+    <state x="1164" y="252" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1739013831353" />
+    <state x="617" y="248" width="672" height="678" key="search.everywhere.popup" timestamp="1739167931964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="617" y="248" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1738986474871" />
+    <state x="617" y="248" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1739167931964" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,6 +966,26 @@
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/ShuZiJiaJianYouXi.java</url>
           <line>25</line>
           <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/WenYiHuiYan.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="382" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/WenYiHuiYan.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="385" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/DaYinRenWuPaiXu.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="418" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/DaYinRenWuPaiXu.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="424" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,7 @@ package com.mytest.ptbase.api.niuke;
 
 import java.util.*;
 
-public class Huisu {
+public class HuisuZifuChuan {
         public List<String> letterCombinations(String digits) {
             List<String> solutions=new ArrayList<>();
             HashMap<Character,String> map=new HashMap<>();
