@@ -3,7 +3,9 @@ package com.mytest.ptbase.api.niuke;
 import java.util.Scanner;
 
 //分披萨，要用long型，总量肯定超出了int的范围2147483648，不是吃左边就是吃右边，要用回溯。用回溯算法解决。
+//https://renjie.blog.csdn.net/article/details/135297269
 //用两个指针，一个指针加，一个指针减。超出范围循环设置。两个指针相等时，最后一块由吃货吃，结束吃披萨。
+//直接暴力回溯可能会爆栈，披萨个数可达500，再思考下。。。
 public class FenPiSa {
     public static long K;//吃货吃的披萨总数
     public static long[] ps;
@@ -32,7 +34,7 @@ public class FenPiSa {
         if(index1==index2){
             count+=ps[index1];
             maxCount=Math.max(maxCount,count);
-            System.out.println();
+//            System.out.println();
             return;
         }
         if(ps[index1]>ps[index2]){
