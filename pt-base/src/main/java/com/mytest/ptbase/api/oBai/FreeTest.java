@@ -11,8 +11,11 @@ public class FreeTest {
 //    public static int n;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-//        String s=in.nextLine();
+
         while (in.hasNextLine()) {
+            //String s=in.nextLine();
+//            int m = Integer.valueOf(s[0]);
+//            int n = Integer.valueOf(s[1]);
             int[] firstHang = Arrays.stream(in.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             int m = firstHang[0];//row
             int n = firstHang[1];//col
