@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2b3f413-4e9c-446c-81bb-1f3cccc80197" name="Default" comment="push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/DanCiJieLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/DanCiJieLong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <recent name="E:\Work666\my_test\src\test\java\com\mytest\function\api\xueqiu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CaiShuZi">
+  <component name="RunManager" selected="Application.CaiZiMi">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -271,8 +271,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DanCiJieLong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.DanCiJieLong" />
+    <configuration name="CaiZiMi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.CaiZiMi" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -285,8 +285,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DuiZhanZongDeShengYuShuZi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.DuiZhanZongDeShengYuShuZi" />
+    <configuration name="DanCiJieLong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.DanCiJieLong" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -482,19 +482,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.DuiZhanZongDeShengYuShuZi" />
       <item itemvalue="Application.BaoShuYouXi" />
       <item itemvalue="Application.ShuiXianHuaShu" />
       <item itemvalue="Application.DanCiJieLong" />
       <item itemvalue="Application.CaiShuZi" />
+      <item itemvalue="Application.CaiZiMi" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CaiZiMi" />
         <item itemvalue="Application.CaiShuZi" />
         <item itemvalue="Application.DanCiJieLong" />
         <item itemvalue="Application.ShuiXianHuaShu" />
         <item itemvalue="Application.BaoShuYouXi" />
-        <item itemvalue="Application.DuiZhanZongDeShengYuShuZi" />
       </list>
     </recent_temporary>
   </component>
@@ -537,7 +537,7 @@
       <workItem from="1737812902285" duration="201000" />
       <workItem from="1737815881956" duration="373739000" />
       <workItem from="1739258981383" duration="5536000" />
-      <workItem from="1739265055778" duration="305261000" />
+      <workItem from="1739265055778" duration="313813000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1578071546294</created>
@@ -802,38 +802,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="270" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1737816348503" />
-    <state width="1378" height="413" key="GridCell.Tab.0.bottom" timestamp="1740103045709">
+    <state width="1415" height="375" key="GridCell.Tab.0.bottom" timestamp="1740111699580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740103045709" />
-    <state width="1378" height="413" key="GridCell.Tab.0.center" timestamp="1740103045709">
+    <state width="1415" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740111699580" />
+    <state width="1415" height="375" key="GridCell.Tab.0.center" timestamp="1740111699580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740103045709" />
-    <state width="1378" height="413" key="GridCell.Tab.0.left" timestamp="1740103045709">
+    <state width="1415" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740111699580" />
+    <state width="1415" height="375" key="GridCell.Tab.0.left" timestamp="1740111699579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740103045709" />
-    <state width="1378" height="413" key="GridCell.Tab.0.right" timestamp="1740103045709">
+    <state width="1415" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740111699579" />
+    <state width="1415" height="375" key="GridCell.Tab.0.right" timestamp="1740111699580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740103045709" />
-    <state width="1378" height="413" key="GridCell.Tab.1.bottom" timestamp="1740103029839">
+    <state width="1415" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740111699580" />
+    <state width="1415" height="375" key="GridCell.Tab.1.bottom" timestamp="1740111696091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740103029839" />
-    <state width="1378" height="413" key="GridCell.Tab.1.center" timestamp="1740103029839">
+    <state width="1415" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740111696091" />
+    <state width="1415" height="375" key="GridCell.Tab.1.center" timestamp="1740111696091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740103029839" />
-    <state width="1378" height="413" key="GridCell.Tab.1.left" timestamp="1740103029839">
+    <state width="1415" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740111696091" />
+    <state width="1415" height="375" key="GridCell.Tab.1.left" timestamp="1740111696091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740103029839" />
-    <state width="1378" height="413" key="GridCell.Tab.1.right" timestamp="1740103029839">
+    <state width="1415" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740111696091" />
+    <state width="1415" height="375" key="GridCell.Tab.1.right" timestamp="1740111696091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1378" height="413" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740103029839" />
+    <state width="1415" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740111696091" />
     <state x="461" y="157" key="SettingsEditor" timestamp="1737812339360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -1115,28 +1115,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="1218" />
+          <line>44</line>
+          <option name="timeStamp" value="1255" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="1219" />
+          <line>45</line>
+          <option name="timeStamp" value="1256" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="1220" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1222" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/CaiShuZi.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1223" />
+          <line>51</line>
+          <option name="timeStamp" value="1257" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/WangZheRongYaoYouXiFenZu.java</url>
