@@ -131,7 +131,7 @@
       <recent name="com.mytest.ptworker.base.configure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HuangDaoQiuSheng">
+  <component name="RunManager" selected="Application.BiSai">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -358,8 +358,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="CaiShuZi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.CaiShuZi" />
+    <configuration name="BiSai" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.BiSai" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -372,8 +372,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CaiZiMi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.CaiZiMi" />
+    <configuration name="CaiShuZi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.CaiShuZi" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -400,8 +400,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YuDingJiuDian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.YuDingJiuDian" />
+    <configuration name="ReDianWangZhanTongJi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.ReDianWangZhanTongJi" />
       <module name="pt-base" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -467,18 +467,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.CaiShuZi" />
-      <item itemvalue="Application.CaiZiMi" />
-      <item itemvalue="Application.YuDingJiuDian" />
       <item itemvalue="Application.ZhaoDengZhiYuanSu" />
       <item itemvalue="Application.HuangDaoQiuSheng" />
+      <item itemvalue="Application.ReDianWangZhanTongJi" />
+      <item itemvalue="Application.BiSai" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BiSai" />
+        <item itemvalue="Application.ReDianWangZhanTongJi" />
         <item itemvalue="Application.HuangDaoQiuSheng" />
         <item itemvalue="Application.ZhaoDengZhiYuanSu" />
         <item itemvalue="Application.CaiShuZi" />
-        <item itemvalue="Application.YuDingJiuDian" />
-        <item itemvalue="Application.CaiZiMi" />
       </list>
     </recent_temporary>
   </component>
@@ -1068,6 +1068,61 @@
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/HuangDaoQiuSheng.java</url>
           <line>44</line>
           <option name="timeStamp" value="1284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ReDianWangZhanTongJi.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="1300" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="1301" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1302" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1304" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="1305" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1306" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="1307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1308" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/WangZheRongYaoYouXiFenZu.java</url>
