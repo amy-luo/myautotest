@@ -6,19 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pt-worker-base" />
-        <module name="pt-worker-client" />
         <module name="pt-manager" />
         <module name="pt-base" />
+        <module name="pt-worker-base" />
+        <module name="pt-worker-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="com.mytest" target="1.5" />
+      <module name="com.mytest" target="1.8" />
       <module name="pt-base" target="8" />
-      <module name="pt-manager" target="1.7" />
-      <module name="pt-worker" target="1.5" />
+      <module name="pt-manager" target="1.8" />
+      <module name="pt-worker" target="1.8" />
       <module name="pt-worker-base" target="8" />
-      <module name="pt-worker-client" target="1.5" />
+      <module name="pt-worker-client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
