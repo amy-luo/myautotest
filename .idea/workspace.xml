@@ -1076,53 +1076,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="1299" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>42</line>
+          <line>43</line>
           <option name="timeStamp" value="1300" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="1301" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1302" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="1303" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="1304" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1305" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1306" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="1307" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
           <line>36</line>
-          <option name="timeStamp" value="1308" />
+          <option name="timeStamp" value="1307" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/WangZheRongYaoYouXiFenZu.java</url>
