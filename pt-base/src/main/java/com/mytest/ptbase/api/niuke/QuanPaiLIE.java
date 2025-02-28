@@ -1,7 +1,7 @@
 package com.mytest.ptbase.api.niuke;
 
 import java.util.*;
-//递归回溯：
+//字符串拼接,递归回溯：
 //全排列并去重：https://leetcode.cn/problems/permutations-ii/description/
 //https://renjie.blog.csdn.net/article/details/142267363
 //给定一个可包含重复数字的序列 nums ，按任意顺序 返回所有不重复的全排列。

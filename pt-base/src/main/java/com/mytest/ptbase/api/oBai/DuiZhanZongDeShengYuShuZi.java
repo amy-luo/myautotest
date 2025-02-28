@@ -18,15 +18,15 @@ public class DuiZhanZongDeShengYuShuZi {
         while (in.hasNextLine()) {
             int[] dataArray = Arrays.stream(in.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             int m = dataArray.length;//row
-            Stack<Integer> stack = new Stack<>();
+            Stack<Integer> stack = new Stack<>();//主栈
             for (int i = 0; i < m; i++) {
                 Stack<Integer> stack2 = new Stack<>();//辅助栈
                 int tmp = dataArray[i];
-                stack2.push(tmp);
+                stack2.push(tmp);//将当前元素存入辅助栈，不直接放入主栈，因为需要拿主栈中的元素来进行比较。
                 int sum = 0;
                 while (!stack.isEmpty()) {
-                    int pop = stack.pop();
-                    stack2.push(pop);
+                    int pop = stack.pop();//将主栈中的元素拿出来，取和
+                    stack2.push(pop);//主栈中的元素拿出来后要放入辅助栈中，方便恢复。
                     sum += pop;
                     if (sum == tmp) {
                         tmp = 2 * tmp;
@@ -39,7 +39,7 @@ public class DuiZhanZongDeShengYuShuZi {
                         }
                     }
                 }
-                while(!stack2.isEmpty()){
+                while(!stack2.isEmpty()){//恢复主栈中pop到辅助栈中的元素
                     stack.push(stack2.pop());
                 }
             }

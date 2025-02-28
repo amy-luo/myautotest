@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 //王者荣耀游戏分组，https://renjie.blog.csdn.net/article/details/134767643
-//从最小偏差起，逐渐拉大偏差，总和减去偏差需要能除2余0，不然就不存在这种偏差。是否满足条件递归回溯
+//从最小偏差起，逐渐拉大偏差，总和减去偏差需要能除2余0，不然就不存在这种偏差。递归回溯看是否满足条件
 public class WangZheRongYaoYouXiFenZu {
     public static int[] dataArray;
     public static boolean[] isVisited;
