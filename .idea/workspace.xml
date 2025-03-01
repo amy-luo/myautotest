@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2b3f413-4e9c-446c-81bb-1f3cccc80197" name="Default" comment="push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/FreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/FreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/LTBai/ZuiChangZiZiFuChuanDeChangDu2.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/LTBai/ZuiChangZiZiFuChuanDeChangDu2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/FreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/FreeTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BiSai$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BiSai$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BiSai.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BiSai.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/FreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/FreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/LTBai/FreeTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,11 +112,12 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Work666\my_test\pt-worker\pt-worker-base\src\main\resources" />
-      <recent name="E:\Work666\my_test\pt-base\src\main\resources" />
-      <recent name="E:\Work666\my_test\pt-worker\pt-worker-biz" />
-      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="E:\Work666\my_test\pt-manager\src\main\resources" />
+      <recent name="E:\Work666\my_test\pt-manager\src\main" />
+      <recent name="E:\Work666\my_test\pt-worker\pt-worker-client\src\main" />
+      <recent name="E:\Work666\my_test\src\test\java\com\mytest\function\api\xueqiu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mytest.ptbase.api.LTBai" />
@@ -131,17 +126,68 @@
       <recent name="com.mytest.ptworker.base.wrapper" />
       <recent name="com.mytest.ptworker.base.configure" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Work666\my_test\pt-worker\pt-worker-base\src\main\resources" />
-      <recent name="E:\Work666\my_test\pt-manager\src\main\resources" />
-      <recent name="E:\Work666\my_test\pt-manager\src\main" />
-      <recent name="E:\Work666\my_test\pt-worker\pt-worker-client\src\main" />
-      <recent name="E:\Work666\my_test\src\test\java\com\mytest\function\api\xueqiu" />
+      <recent name="E:\Work666\my_test\pt-base\src\main\resources" />
+      <recent name="E:\Work666\my_test\pt-worker\pt-worker-biz" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="FreeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.FreeTest" />
+  <component name="RunManager" selected="Application.TanXinGeShou">
+    <configuration name="FangLISPjiSuan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.FangLISPjiSuan" />
+      <module name="pt-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" />
+      <module name="pt-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PanDengZhe2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.PanDengZhe2" />
+      <module name="pt-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TanXinGeShou" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.TanXinGeShou" />
+      <module name="pt-base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WenJianHuanCunXiTong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.WenJianHuanCunXiTong" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
@@ -155,7 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FreeTest" />
+        <item itemvalue="Application.TanXinGeShou" />
+        <item itemvalue="Application.LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" />
+        <item itemvalue="Application.WenJianHuanCunXiTong" />
+        <item itemvalue="Application.PanDengZhe2" />
+        <item itemvalue="Application.FangLISPjiSuan" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +250,7 @@
       <workItem from="1737815881956" duration="373739000" />
       <workItem from="1739258981383" duration="5536000" />
       <workItem from="1739265055778" duration="563352000" />
-      <workItem from="1740725879077" duration="1711000" />
+      <workItem from="1740725879077" duration="30358000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1578071546294</created>
@@ -458,10 +508,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加zk，实现分布式集群的压测数据同步。" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1193" y="382" width="495" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1740481166024">
+    <state x="1193" y="382" width="495" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1740786429668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1193" y="382" width="495" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1740481166024" />
+    <state x="1193" y="382" width="495" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1740786429668" />
     <state x="828" y="118" key="CommitChangelistDialog2" timestamp="1740705596252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -482,38 +532,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="741" height="368" key="GridCell.Tab.-1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740448247250" />
-    <state width="1777" height="499" key="GridCell.Tab.0.bottom" timestamp="1740727596895">
+    <state width="1453" height="274" key="GridCell.Tab.0.bottom" timestamp="1740826185107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1777" height="499" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596895" />
-    <state width="1777" height="499" key="GridCell.Tab.0.center" timestamp="1740727596895">
+    <state width="1453" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
+    <state width="1453" height="274" key="GridCell.Tab.0.center" timestamp="1740826185107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1777" height="499" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596895" />
-    <state width="1777" height="499" key="GridCell.Tab.0.left" timestamp="1740727596895">
+    <state width="1453" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
+    <state width="1453" height="274" key="GridCell.Tab.0.left" timestamp="1740826185107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1777" height="499" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596895" />
-    <state width="1777" height="499" key="GridCell.Tab.0.right" timestamp="1740727596895">
+    <state width="1453" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
+    <state width="1453" height="274" key="GridCell.Tab.0.right" timestamp="1740826185107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1777" height="499" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596895" />
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.bottom" timestamp="1740727596759">
+    <state width="1453" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.bottom" timestamp="1740826184960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596759" />
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.center" timestamp="1740727596759">
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.center" timestamp="1740826184960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596759" />
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.left" timestamp="1740727596759">
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.left" timestamp="1740826184960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596759" />
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.right" timestamp="1740727596759">
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.right" timestamp="1740826184960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1777" height="499" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740727596759" />
+    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
     <state x="294" y="414" width="712" height="329" key="GridCell.Tab.2.bottom" timestamp="1740448249401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -542,14 +592,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="294" y="414" width="728" height="385" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1740449781419" />
-    <state x="846" y="274" width="672" height="677" key="run.anything.popup" timestamp="1740548404812">
+    <state x="846" y="274" width="672" height="677" key="run.anything.popup" timestamp="1740810017484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="846" y="274" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740548404812" />
-    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup" timestamp="1740702650190">
+    <state x="846" y="274" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740810017484" />
+    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup" timestamp="1740825936414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740702650190" />
+    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740825936414" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -862,6 +912,31 @@
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSai.java</url>
           <line>36</line>
           <option name="timeStamp" value="1307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/XiangTongShuZiZuChengDeTuXingZhouChang.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1647" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/XiangTongShuZiZuChengDeTuXingZhouChang.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="1652" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/JvXingHuiZhi.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="1661" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/JvXingHuiZhi.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="1663" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="1713" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/WangZheRongYaoYouXiFenZu.java</url>
