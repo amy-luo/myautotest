@@ -23,7 +23,7 @@ public class ChuanDiQiaoQiaoHua {
     }
 
     private static void dfs(int i, int[] dataArray, int sum) {
-        if(i>=dataArray.length){
+        if(i>=dataArray.length||dataArray[i]==-1){
             maxSum = Math.max(maxSum, sum);
         return;
         }else{

@@ -3,7 +3,7 @@ package com.mytest.ptbase.api.oBai;
 import java.util.*;
 
 //星际篮球争霸赛，MVP争夺战，https://renjie.blog.csdn.net/article/details/128259596
-//等和子数组最小和,数组从大到小排序，分桶，小于等和，按大到小依次放置元素,递归回溯。
+//难，等和子数组最小和,数组从大到小排序，分桶，小于等和，按大到小依次放置元素,递归回溯。
 public class MVPZhengDuoZhan {
     public static Integer[] ar1;
     public static int sum;
@@ -55,7 +55,8 @@ public class MVPZhengDuoZhan {
             }
             for (int i = 0; i < groupNum; i++) {
                 if (map.getOrDefault(i, 0) + ar1[index] <= he) {
-                    if (map.get(i) == 0 || (i > 0 && map.get(i) == map.get(i - 1))) {
+                    if (i > 0 && map.get(i) == map.get(i - 1)) {continue;}//如果两个桶和相同，那放其中任何一个桶都一样
+                    if (map.get(i) == 0) {//刚开始的时候，桶里没球的时候，球放任何一个桶都可以，就放当前桶，后面的桶无需遍历了。
                         map.put(i, map.getOrDefault(i, 0) + ar1[index]);
                         boolean res = isCheckFen(map, index + 1);
                         if (res) {

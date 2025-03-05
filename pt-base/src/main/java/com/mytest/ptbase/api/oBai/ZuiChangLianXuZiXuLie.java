@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 //最长连续子序列,https://renjie.blog.csdn.net/article/details/131775315
-//双指针并排，伸缩
+//前缀和，双指针并排，伸缩
 public class ZuiChangLianXuZiXuLie {
     public static int[][] matrix;
     public static boolean[][] isVisited;

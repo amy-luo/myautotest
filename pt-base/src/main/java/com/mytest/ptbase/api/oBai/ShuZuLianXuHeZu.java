@@ -17,6 +17,7 @@ public class ShuZuLianXuHeZu {
             int[] preSum = new int[m];
             preSum[0] = dataArray[0];
             int count = 0;
+            if(preSum[0]>=x){count++;}
             for (int i = 1; i < m; i++) {
                 preSum[i] = preSum[i - 1] + dataArray[i];
                 if (preSum[i] >= x) {

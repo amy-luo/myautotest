@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 //最大矩阵和,https://renjie.blog.csdn.net/article/details/127974083
-//暴力解法，遍历矩阵每个元素，将从0,0到该元素的矩阵和求出来；再固定上下行和左右列，求其框住的矩阵和；
+//暴力解法，遍历矩阵每个元素，将从0,0到该元素的矩阵和求出来(前缀矩阵和)；再固定上下行和左右列，求其框住的矩阵和；
 //注意场景分析，i,j等于0的情况分析。
 public class ZuiDaJuZhenHe {
     public static int[][] matrix;

@@ -34,7 +34,7 @@ public class YiZhongZiFuChuanYaSuoBiaoShiDeJieYa {
                            input[i]=tihuan;
                             num = "";
                         }else if(Character.isDigit(input[i+1].charAt(0))){
-                            input[i] = "";
+                            input[i] = "";//多为数字，要把前面的数字替换为空
                         }
                     }
                 }

@@ -5,8 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2b3f413-4e9c-446c-81bb-1f3cccc80197" name="Default" comment="push">
+      <change afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FenPiSa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/LiuLangDiQiu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShouJiFangChenMiYouXi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/YingWenShuRuFa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/LTBai/FreeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/APPTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/ChongDianSheBei.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ChaZhaoChongDianSheBeiZuHe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/FenPiSa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/GuangFuDianZhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/GuangFuChangDiJianSheGuiHuaDianZhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/LianXuZiMuLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/LianXuZiMuChangDu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/LiuLangDiQiu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/ShuRuFa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/TLVxinYuanJieMa.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/TLVjieMaXinYuanJieMa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/XiangMuPaiQi.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/XiangMuPaiQi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/XiangMuPaiQi2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/XiangMuPaiQi2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/XuniLiCai.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/XuniLiCaiYouXi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/ZhengZeHuoXingWen.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/HuoXingWenJiSuan1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BuZhongWeiChengHuoHuYang.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BuZhongWeiChengHuoHuYang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ChuanDiQiaoQiaoHua.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ChuanDiQiaoQiaoHua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FenTangGuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FenTangGuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/GuanLianZiChuan.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/GuanLianZiChuan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/HuiTuJiQi.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/JiSuanMianJiHuiTuJiQi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/IPv4DiZhiZhuanHuanChengZhengShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/IPv4DiZhiZhuanHuanChengZhengShu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/LuoXuanShuZuJuZhen.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShuZiLuoXuanShuZuJuZhen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/MVPZhengDuoZhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/MVPZhengDuoZhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShuZuLianXuHeZu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShuZuLianXuHeZu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/XiangZiBaiFang.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/XiangZiZhiZiXingBaiFang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/YiZhongZiFuChuanYaSuoBiaoShiDeJieYa.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/YiZhongZiFuChuanYaSuoBiaoShiDeJieYa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZhaoDengZhiYuanSu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZhaoShuZiZhaoDengZhiYuanSu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZhengShuBianMa.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZhengShuBianMa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiChangLianXuZiXuLie.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiChangLianXuZiXuLie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaBaoChou.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/GongZuoAnPaiZuiDaBaoChou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaHuaFeiJinE.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaHuaFeiJinE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaJuZhenHe.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaJuZhenHe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaLiRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/TanXinDeShangRenZuiDaLiRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiShaoJiaoHuanCiShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/GenJuMouTiaoJianJuLeiZuiShaoJiaoHuanCiShu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiShaoTiaoZhengCiShu.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiShaoTiaoZhengCiShu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiXiaoShuZi.java" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShuZuZuChengDeZuiXiaoShuZi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/APPTime$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/APPTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/ChongDianSheBei.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/FenPiSa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/GuangFuDianZhan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/LianXuZiMuLength.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/LiuLangDiQiu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/ShuRuFa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/TLVxinYuanJieMa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/XiangMuPaiQi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/XiangMuPaiQi2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/XuniLiCai.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/niuke/ZhengZeHuoXingWen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BuZhongWeiChengHuoHuYang.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/BuZhongWeiChengHuoHuYang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ChuanDiQiaoQiaoHua.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ChuanDiQiaoQiaoHua.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/FenTangGuo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/FenTangGuo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/GuanLianZiChuan.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/GuanLianZiChuan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/HuiTuJiQi$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/HuiTuJiQi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/IPv4DiZhiZhuanHuanChengZhengShu.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/IPv4DiZhiZhuanHuanChengZhengShu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/LuoXuanShuZuJuZhen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/MVPZhengDuoZhan.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/MVPZhengDuoZhan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ShuZuLianXuHeZu.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ShuZuLianXuHeZu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/XiangZiBaiFang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZhaoDengZhiYuanSu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZhengShuBianMa.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZhengShuBianMa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiDaBaoChou.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiDaHuaFeiJinE.class" beforeDir="false" afterPath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiDaHuaFeiJinE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiDaLiRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiShaoJiaoHuanCiShu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiXiaoShuZi$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt-base/target/classes/com/mytest/ptbase/api/oBai/ZuiXiaoShuZi.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,9 +190,9 @@
       <recent name="E:\Work666\my_test\src\test\java\com\mytest\function\api\xueqiu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mytest.ptbase.api.oBai" />
       <recent name="com.mytest.ptbase.api.LTBai" />
       <recent name="com.mytest.ptbase.api.niuke" />
-      <recent name="com.mytest.ptbase.api.oBai" />
       <recent name="com.mytest.ptworker.base.wrapper" />
       <recent name="com.mytest.ptworker.base.configure" />
     </key>
@@ -133,13 +203,13 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TanXinGeShou">
-    <configuration name="FangLISPjiSuan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.FangLISPjiSuan" />
+  <component name="RunManager" selected="Application.JingZhunHeSuanJianCe">
+    <configuration name="AnDanCiXiaBiaoQuJianFanZhuanWenZhangNeiRong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.AnDanCiXiaBiaoQuJianFanZhuanWenZhangNeiRong" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="PATTERN" value="com.mytest.ptbase.api.oBai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,12 +217,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" />
+    <configuration name="DouDiZhuZhiShunZI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.DouDiZhuZhiShunZI" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="PATTERN" value="com.mytest.ptbase.api.oBai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,12 +230,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PanDengZhe2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.PanDengZhe2" />
+    <configuration name="JingZhunHeSuanJianCe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.JingZhunHeSuanJianCe" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="PATTERN" value="com.mytest.ptbase.api.oBai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,12 +243,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TanXinGeShou" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.TanXinGeShou" />
+    <configuration name="WanQuanErChaShuFeiYeZiBuFenHouXuBianLi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.WanQuanErChaShuFeiYeZiBuFenHouXuBianLi" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="PATTERN" value="com.mytest.ptbase.api.oBai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,12 +256,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WenJianHuanCunXiTong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.LTBai.WenJianHuanCunXiTong" />
+    <configuration name="ZuiChangDeShunZi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mytest.ptbase.api.oBai.ZuiChangDeShunZi" />
       <module name="pt-base" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mytest.ptbase.api.LTBai.*" />
+          <option name="PATTERN" value="com.mytest.ptbase.api.oBai.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -201,11 +271,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TanXinGeShou" />
-        <item itemvalue="Application.LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi" />
-        <item itemvalue="Application.WenJianHuanCunXiTong" />
-        <item itemvalue="Application.PanDengZhe2" />
-        <item itemvalue="Application.FangLISPjiSuan" />
+        <item itemvalue="Application.JingZhunHeSuanJianCe" />
+        <item itemvalue="Application.WanQuanErChaShuFeiYeZiBuFenHouXuBianLi" />
+        <item itemvalue="Application.DouDiZhuZhiShunZI" />
+        <item itemvalue="Application.ZuiChangDeShunZi" />
+        <item itemvalue="Application.AnDanCiXiaBiaoQuJianFanZhuanWenZhangNeiRong" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +320,7 @@
       <workItem from="1737815881956" duration="373739000" />
       <workItem from="1739258981383" duration="5536000" />
       <workItem from="1739265055778" duration="563352000" />
-      <workItem from="1740725879077" duration="30358000" />
+      <workItem from="1740725879077" duration="126827000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1578071546294</created>
@@ -532,38 +602,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="741" height="368" key="GridCell.Tab.-1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740448247250" />
-    <state width="1453" height="274" key="GridCell.Tab.0.bottom" timestamp="1740826185107">
+    <state width="1712" height="459" key="GridCell.Tab.0.bottom" timestamp="1741145278460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1453" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
-    <state width="1453" height="274" key="GridCell.Tab.0.center" timestamp="1740826185107">
+    <state width="1712" height="459" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1741145278460" />
+    <state width="1712" height="459" key="GridCell.Tab.0.center" timestamp="1741145278460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1453" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
-    <state width="1453" height="274" key="GridCell.Tab.0.left" timestamp="1740826185107">
+    <state width="1712" height="459" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1741145278460" />
+    <state width="1712" height="459" key="GridCell.Tab.0.left" timestamp="1741145278460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1453" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
-    <state width="1453" height="274" key="GridCell.Tab.0.right" timestamp="1740826185107">
+    <state width="1712" height="459" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1741145278460" />
+    <state width="1712" height="459" key="GridCell.Tab.0.right" timestamp="1741145278460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1453" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740826185107" />
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.bottom" timestamp="1740826184960">
+    <state width="1712" height="459" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1741145278460" />
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.bottom" timestamp="1741145274352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.center" timestamp="1740826184960">
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1741145274352" />
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.center" timestamp="1741145274352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.left" timestamp="1740826184960">
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1741145274352" />
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.left" timestamp="1741145274352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.right" timestamp="1740826184960">
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1741145274352" />
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.right" timestamp="1741145274352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="294" y="414" width="1453" height="274" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1740826184960" />
+    <state x="294" y="414" width="1712" height="459" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1741145274352" />
     <state x="294" y="414" width="712" height="329" key="GridCell.Tab.2.bottom" timestamp="1740448249401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -596,10 +666,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="846" y="274" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740810017484" />
-    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup" timestamp="1740825936414">
+    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup" timestamp="1741142962291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1740825936414" />
+    <state x="815" y="182" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1741142962291" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,7 +724,7 @@
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/niuke/TLVxinYuanJieMa.java</url>
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/TLVjieMaXinYuanJieMa.java</url>
           <line>24</line>
           <option name="timeStamp" value="152" />
         </line-breakpoint>
@@ -764,11 +834,6 @@
           <option name="timeStamp" value="893" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/MVPZhengDuoZhan.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="968" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/LinuxFaXingBanDeShuLiang.java</url>
           <line>29</line>
           <option name="timeStamp" value="983" />
@@ -869,11 +934,6 @@
           <option name="timeStamp" value="1383" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BuZhongWeiChengHuoHuYang.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1385" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/FenPingGuo.java</url>
           <line>30</line>
           <option name="timeStamp" value="1407" />
@@ -937,6 +997,51 @@
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/LTBai/LiangGeZiFuChuanJianDeZuiDuanLuJingWenTi.java</url>
           <line>42</line>
           <option name="timeStamp" value="1713" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="1714" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuCheQiLuDao.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="1715" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/BiSaiDeGuanYaJiJun.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1736" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/YingWenShuRuFa.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1741" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZengQiangDeStrStr.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1750" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ShouJiFangChenMiYouXi.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1769" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaKuoHaoShenDu.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1801" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiDaKuoHaoShenDu.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1803" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/ZuiChangDeShunZi.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="1828" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/pt-base/src/main/java/com/mytest/ptbase/api/oBai/WangZheRongYaoYouXiFenZu.java</url>

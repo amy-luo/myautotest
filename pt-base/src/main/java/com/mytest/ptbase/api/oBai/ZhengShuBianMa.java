@@ -34,17 +34,16 @@ public class ZhengShuBianMa {
                 num_16=bigInteger.toString(16);
                 Integer.toString(3,2);
             }
+            if(num_16.length()==1){num_16 = "0" + num_16;}
             stb.insert(0,num_16);
             for(int i=1;i<n;i++){
                 BigInteger bigInteger =new BigInteger("1"+num.substring(yu+8*(i-1)+1, yu+8*(i-1)+8),2);
                 String num2_16=bigInteger.toString(16);
+                if(num2_16.length()==1){num2_16 = "0" + num2_16;}
                 stb.insert(0,num2_16);
             }
-            if(stb.length()==1){
-                System.out.println("0"+stb.toString().toUpperCase());
-            }else {
-                System.out.println(stb.toString().toUpperCase());
-            }
+
+            System.out.println(stb.toString().toUpperCase());
         }
     }
 

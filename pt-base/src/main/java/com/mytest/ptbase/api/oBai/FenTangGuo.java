@@ -23,7 +23,7 @@ public class FenTangGuo {
         }
     }
     private static int dfsFenTang(long num,int count){
-        if(num==0||num==1){return 0;}
+        if(num==0){return 0;}
         if(num==1){return count;}
         if(num%2==0){
             count++;

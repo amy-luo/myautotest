@@ -24,13 +24,27 @@ public class IPv4DiZhiZhuanHuanChengZhengShu {
             if(!res.equals("invalid IP")) {
                 StringBuilder stb = new StringBuilder();
                 int count=0;
+                boolean flag=true;
                 for (int i = 0; i < str.length; i++) {
-                    String er = Integer.toString(Integer.valueOf(str[i]), 2);
-                    stb.append(er);
+                    int tmp=Integer.valueOf(str[i]);
+                    if(i==0&&(tmp<1||tmp>128)){
+                        res = "invalid IP";
+                        flag=false;
+                        break;
+                    }
+                    if(i>0&&(tmp<0||tmp>255)){
+                        res = "invalid IP";
+                        flag=false;
+                        break;
+                    }
+                    count+=tmp<<8*(3-i);
+//                    String er = Integer.toString(Integer.valueOf(str[i]), 2);
+//                    stb.append(er);
 //                    count+=Integer.valueOf(str[i])*Math.pow(2,8*(3-i));
-                    count+=Integer.valueOf(str[i])<<8*(3-i);
                 }
-                res = String.valueOf(count);
+                if(flag) {
+                    res = String.valueOf(count);
+                }
 //                res = Integer.toString(Integer.valueOf(stb.toString()), 10);//超出了整型范围
             }
             System.out.println(res);
